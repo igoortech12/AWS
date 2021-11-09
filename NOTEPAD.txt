@@ -1,0 +1,5 @@
+AWS Well-Architected Framework (BR)
+UDEMY - https://www.udemy.com/course/draft/2437002/learn/lecture/15298818?start=0#overview
+
+Cloud Practitioner
+https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/

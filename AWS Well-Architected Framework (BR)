@@ -1,0 +1,79 @@
+Seção 1: Introdução
+    1. Visão Geral
+        O Well-Architected Framework cobre estratégias e melhorias práticas para arquitetura em cloud computing.
+        Ele prevê uma maneira de mensurar sua arquitetura de acordo com as recomendações da AWS, corrigindo deficiências e endereçando ações de melhoria.
+        Permite da tomada de decições mais assertivas com pensamento cloud-native.
+        Maior conscientização sobre as melhores práticas de arquitetura.
+        Endereça áreas de base (fundamentos) que frenquentemente são negligenciadas.
+        Provê uma abordagem consistente para avaliação da arquitetura.
+        Não é preciso estimar (advinhar) a capacidade requerida.
+        Testes podem ser realizados em escala de produção.
+        Criar e experimentar facilmente as soluções.
+        Permite a criação e evolução da arquitetura.
+        Soluções são criadas com base nas necessidades (data-driven).
+        Melhora através de game days (eventos em produção).
+        Baseado em cinco pilares, excelência operancional, segurança, confiabilidade, eficiência de performance e otimização de custos, o Framework fornece
+    uma abordagem consistente para que clientes e parceiros avaliem arquiteturas e implementem designs que serão escalados ao longo do tempo.
+
+        Usos comuns do Well-Architected:
+        Aprender como criar arquit nativas de cloud.
+        Construir uma base de conhecimento para mitigar falhas técnicas e riscos.
+        Utilizaçõa como um mecanismos de padronização e governança ates de produção.
+        Comparar a maturidade entra diferentes times, sistemas e produtos.
+        Apresentar ao mercado características de due-diligence.
+
+Seção 2: Excelência Operacional
+    2. Pilar de Excelência Operacional
+        O pilar de excelência operancional se concentra em executar e monitorar sistemas para entregar valor empresarial e melhorar continuamente processos
+    e procedimentos.
+
+        Design Principles:
+        Perform operations as code (Execute a operação como código).
+        Annotate documentation (Anotar documentação).
+        Make frequent, small, reversible changes (Alterações frequentes, pequenas e reversíveis).
+        Refine operations procedures frequently (Refine os procedimentosde operação frequentemente).
+        Anticipate failure (Antecipação as falhas).
+        Learn from all operational failures (Aprenda com todas as falhas na operação).
+
+        Preparar:
+        Business
+        Checklist
+        Treinamento
+        Experimentação
+        Questões:
+        OPS1: How do you determine your priorities are?
+            Everyone needs to understand their part in enabling business success. Have shared goals in order to set priorities for resources. This will maximize
+        the benefits of your efforts.
+        OPS2: How do you design your so that can understand its state?
+            Design your workload so that is provides the information nacessary for you to understand its internal state (for example, metrics, logs, and traces) 
+        across all components. This enables you to provide effective responses when appropriate.
+
+        Operar:
+        Saúde da operação
+        Insights Técnicos e de Negócios
+        Respostas a eventos
+        Questões:
+        OPS8: How do you manage workload and operations events?
+           Prepare and validate procedures for responding to events to minimize their disruption to your workload.
+        OPS7: How do you understand the health of your operations?
+            Define, capture, and analize operations metrics to gain visibility to operations events so that you can take appropriate action.
+
+        Evoluir:
+        Ciclos de melhorias incrementais.
+        Rever as prioridades definidas.
+        Provendo feedback as áreas da empresa.
+        Compartilhando lições aprendidas e as oportunidades de melhoria das análises efetuadas.
+        DevOps para codificações, testes, deploy contínuo de forma automatizada na empresa.
+
+        Serviços Chave:
+        CloudFormation
+            CloudWatch
+            VPC Flow logs
+            CloudTrail
+            Config
+            Elasticsearch
+            X-Ray
+
+Seção 3: Segurança
+    3. Pilar de Segurança
+        
