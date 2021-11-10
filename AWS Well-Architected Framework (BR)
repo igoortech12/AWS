@@ -99,3 +99,16 @@ Seção 3: Segurança
         SEC2: How do you control human access?
             Control human access by implementing controls inline with defined business requeriments to reduce risk and lower the impact of unauthorized access.
         This applies to privilaged users and administrators of your AWS account, and also applies to end users of your application.
+
+        Detectives controls
+        Controles detectivos devem ser utilizados para identificar potenciais ameaças de segurança ou incidentes. Ex: Avaliação de inventário de ativos e 
+    auditoria interna.
+        Implementação de controles qe possam identificar e reagir a qualquer atividade anormal. Através do processamento de logs, eventos e monitoramento.
+    Análises automatizadas e alarmes em tempo real.
+        Gerenciamento de logs e essencial para responder a eventos de segurança, análises forense e compliance com requisitos legais.
+        Questões:
+        SEC4: How do you detect and investigate securty events?
+            Capture and analyze events from logs and metrics to gain visibility. Take action on security events and potential threats to help secure your workload.
+        SEC5: How do you defend against emerging security threats?
+            Staying up date with AWS and industry best practices and threat intelligente helps you be aware of new risks. This enables you to create a threat to
+            identify, prioritiza, and implement appropriate controls to help protect yout workload.
