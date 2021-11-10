@@ -76,4 +76,26 @@ Seção 2: Excelência Operacional
 
 Seção 3: Segurança
     3. Pilar de Segurança
-        
+        O pilar de Segurança inclui a habilidade de proteger a informação, sistemas e ativos entregando valor ao negócio através de análise de riscos e 
+    estratégias de mitigação.
+
+        Design Principles
+        Implement a strong identity foundation (Implemente uma gestão de identidades bem fundamentada).
+        Enable traceability (Habilitar a rastreabilidade).
+        Apply security at all layers (Aplicar segurança em todas as camadas).
+        Automate security best practices (Automatizar as melhores práticas de segurança).
+        Protect data in trasnit and at rest (Protejer os daos em trânsito e descanso).
+        Keep peaple away from data (Manter as pessoas longe dos dados).
+        Prepare for security events (Preparar-se para eventos de segurança).
+
+        Identity and Access Management
+        Somente o pessoal autorizado e autenticado tenha acesso aos recursos da maneira prevista.
+        Estrutura bem definida de gerenciamento de privilégios, com políticas de acesso com granularidade.
+        Política de senhas fortes, Multi-factor authentication (MFA), Federação de Diretório e Credenciais temporárias.
+        Questões:
+        SEC1: How do you manage credentials and authentication?
+            Credentials and authentication mechanisms include passwords, tokens, and keys that grant access directly or indirectly in your workload.
+        Protect credentials with appropriate mechanisms to help reduce the risk of accidental or malicious use.
+        SEC2: How do you control human access?
+            Control human access by implementing controls inline with defined business requeriments to reduce risk and lower the impact of unauthorized access.
+        This applies to privilaged users and administrators of your AWS account, and also applies to end users of your application.
