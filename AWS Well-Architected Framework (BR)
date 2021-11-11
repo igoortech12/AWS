@@ -112,3 +112,46 @@ Seção 3: Segurança
         SEC5: How do you defend against emerging security threats?
             Staying up date with AWS and industry best practices and threat intelligente helps you be aware of new risks. This enables you to create a threat to
             identify, prioritiza, and implement appropriate controls to help protect yout workload.
+
+        Infrastructure Protection
+        Proteção da infraestrutura inclui defesa em profundidade (múltiplas camadas de defesa).
+        Podem ser implementadas estratégias de segmentação de redes (públicas e privadas), inspeções de pacotes, isolamento de resursos, topologia de redes (gatways, tabelas de retamentos, etc.).
+        Enforcement de tráfego de entrada e saída, monitoramento dos acesso e alertas.
+        Hardenig de sistema operacional e escolha de serviços gerenciados pela AWS.
+        Questões:
+        SEC6: How do you protect your networks?
+            Public and private networks require multiple layers of defense to help protect from external and internal network-based threats.
+        SEC7: How do you protect your compute resources?
+            Compute resources in your workload require multiple layes of defense to help protect from external and internal threats. Compute resources include EC2 instances, containers, AWS Lambda functions, database, services, IoT devices, and more.
+
+        Data Protection
+        Classificação de dados para a proteção das informações (controles criptográficos, níveis de acesso, ect).
+        O cliente mantêm o controle completo sobre os dados, podendo utilizar sertviços da AWS para proteger a confiabilidade e integridade dos dados.
+        Logs detalhados de acesso, mecanismos de recuperação e durabilidade dos dados devem ser planejados. Podendo ser adotadas estratégias de replicação e gerenciamento do ciclo de vida dos dados.
+        Questões:
+        SEC8: How do you classify your data?
+            Classification provides a way to categorize data, based on levels of sensitivity, to help you determine appropriate protective and retention controls.
+        SEC9: How do you protect your data at rest?
+            Protect your data at rest by defining your requirements and implementing controls, including encryption, to reduce the risk of unauthorized access or loss.
+
+        Incident Response
+        Ainda que controles detectivos e de prevenção estejam implantados é necessário um proceso de resposta a incidentes de segurança, mitigando os impactos que possam advir na operação e nos objetivos de negócios.
+        A arquitetura do workload afeta diretamente a habilidade em responder a um incidente de segurança, isolando, contendo e restaurando a operação a um estado normal.
+        Ferramentas e automatização devem ser configurados para responder a incidadentes, logs poderão ser analizados e utilizados na resposta.
+        Questões:
+        SEC11: How do you respond to an incident?
+            Preparation is critical to timely investigation and response to security incidents to help minimize potential disruption to your organization.
+
+        Serviços Chave
+        Identity and Access Management
+            CloudWatch
+            VPC
+            CloudTrail
+            Config
+            Organizations
+            KMS
+            WAF Shield CloudFront
+
+Seção 4: Confiabilidade
+    4. Pilar de Confiabilidade
+        
