@@ -154,4 +154,50 @@ Seção 3: Segurança
 
 Seção 4: Confiabilidade
     4. Pilar de Confiabilidade
-        
+        O pilar de confiabilidade se concentra na capacidade de evitar e se recuperar rapidamente das falhas para atender a demanda comercial e de clientes.
+
+        Design Principles
+        Test recovery procedures (Testar os procedimentos de recuperação)
+        Automatically recover from failure (Recuperação automática de falhas)
+        Scalar horizontally to increase aggregate system availabilit (Escalar horizontalmente para aumentar a disponibilidade agregada do sistema)
+        Stop guessing capacity (Parar de adivinhar a capacidade)
+        Manage change in automation (Gerenciar mudanças por automação)
+
+        Foundations
+        Antes de arquitetar qualquer sistema os recusos de base (fundamentos) que influenciam a confiabilidade do sistema devem estar reservados.
+        A alocação de recursos deve olhar entre projetos, evitando a negligência de considerar uma única demanda dentro da empresa.
+        No ambiente de computação em nuvem os recursos de base são de responsabilidade do provedor, cabendo ao cliente selecionar os recursos e capacidade apropriadas ao seu workload visando a confiabilidade.
+        Questões:
+        REL 1: How do you manage service limits?
+            Default service limits exist to prevent accidental provisioning of more resoources than you need. There are also limits on how often you can call API operation to protect services from abuse. If you are using AWS Direct Connect, you have limits on the amount of data you can transfer on each connection. If you are using AWS Marketplace application, you need to understand the limitations of the application. If you are using third-party web services or software as a service, you also need to be aware of the limits of those services.
+        REL 2: How do you manage your network topology?
+            Applications can exist in one or more environments: your existing data center infrastructure, publicly accessible public cloud infrastructure, or private addressed public cloud insfrastructura. Network consideration such as intra and inter-system connectivity, public IP address management, private address management, and name resoluiton are fundamental to using resources in the cloud.
+
+        Change Management
+        Esteja ciente de como as mudanças afetam os sistemas para planejar proativamente. O monitoramento vai permitir que tendências sejam identificadas evitando o problemas de capacidade ou quebra de SLASs.
+        A arquitetura do sistema deve prever mudanças automatizadas no ambiente para aumentar ou reduzir capacidade de forma automatizada.
+        Controles no processo de gerenciamento de mudanças devem assegurar que o enforcement de regras sejam aplicados ao ambiente, garantindo a confiabilidade do sistema somente de mudanças autorizadas.
+        Questões:
+        REL 3: How does your system adapt to changes in demand?
+            A scalable system provides elasticity to add and remove resources automatically so that they closely match the current demand at any given point in time.
+        REL 4: How do you moniotr your resources?
+            Logs and metrics are a powerful tool to gain insight into the health of yout workloads. You can configure your workload to monitor logs and metrics an send notifications when thresholds are crosses or significant events occur. Ideally, when low-performance thresholds are crossed or failures occur, the workload has been architected to automatically self-heal or scale in response.
+
+        Faulire Management
+        Falhas são esperadas em qualquer sistema com uma complexidade razoável. É importante ter ciência dessas falhas responder adequadamente e prevenir que ela volte a ocorrer.
+        Você deve utilizar do monitoramento e automação para reagir aos eventos de falhas.
+        Backups e restore regulares deverão ser efetuados para asegurar a recuperação seja no nível lógico ou físico. RTO e RPO devem estar definidos, sendo testado continuamente o processo de falhas e recuperação para garantir seu atendimento.
+        Questões:
+        REL 6: How do you back up data?
+            Back up data, applications, and operating environments (defined as operating systems configured with applications) to meet requitements for mean tima to recovery (MTTR) and recovery point objectives (RPO).
+        REL 7: How does your system withstand components failures?
+            If your workloads have a requirement, implicit or explicit, for high availability and low mean time to recovery (MTTR), architect your workloads for resilience and distriute your workloads to withstand outages.
+
+        Amazon CloudWatch
+        IAM
+        Trusted Advisor
+        CloudTrail
+        Config
+        Shield
+        Cloud Formation
+        Auto Scaling
