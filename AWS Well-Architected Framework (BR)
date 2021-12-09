@@ -237,9 +237,26 @@ Seção 5: Eficiência de Performance
 
         Questões:
         PERF 3: How do you select your storage solutions?
-        The optimal storage solution for a system varies based on the kind of access method (block, file, or object), patterns of access (random or sequential), required throughput, frequency of access (online, offline, archival), frequency of update (WORM, dynamic), and availability and durability constraints. Well-architected system use multiple storage soluitons and enable different features to improve performance and use resources efficiently.
+            The optimal storage solution for a system varies based on the kind of access method (block, file, or object), patterns of access (random or sequential), required throughput, frequency of access (online, offline, archival), frequency of update (WORM, dynamic), and availability and durability constraints. Well-architected system use multiple storage soluitons and enable different features to improve performance and use resources efficiently.
 
         Database
         A solução mais otimizada de banco de dados irá variar conforme o requeirmento de disponibilidade, consistência, tolerância de partição, latência, durabilidade, escalabilidade e tipos de consulta (query).
         Muitos sistemas usam diferentes tipos de bancos para atender variados cenários de performance.
         Na AWS você irá encontrar soluções de banco de dados para atender todos os tipos de worload. Amazon RDS como um banco de dados genreciado para SQL. DynamoDB para NoSQL com alta performance, escalabilidade e baixa latência. AmazonRedshift para data warehouse na ordem de petabytes. Amazon Neptune para Graph. Amazon Timestream para séries temporais. Elasticache como BD em memória, entre outros.
+
+        Questões:
+        PERF 4: How do you select your database solution?
+            The optimal database solution for a system varies based on requirements for availability, consistency, partition tolerance, latency, durability, and query capability. Many systems use different database solutions for various sub-systems and enabçe different features to improve performance. Selecting the wrong database solution and features for a system can lead to lower performance efficiency.
+
+        Network
+        A solução mais timizada de rede irá variar conforma a sistema em particular baseado em requisitos de latência e throughput (largura de banda). Restrições físicas de rede são removidas se comparadas ao mundo on-premises.
+        Técnica de distribuição de conteúdo próximo ao usuário (edge techniques) ou placement group o qual especifica como as máquinas virtuais serão dispostas em hardware adjaente ou não.
+        A AWS oferece features como Enhenced Networking, Amazon EBS-optimized instances, Amazon S3 transfer acceleration, Amazon CloudFront, Amazon Route 53 latency routing, Amazon VPC endpoints e AWS Direct Connect para entregar de rede otimizada seja internamente na AWS, na conexão co o Datacenter on-premises ou serviços pela Internet aos usuários.
+
+        Questões:
+        PERF 5: How do you configure your networking solution?
+            The optimal network soluiton for a system varies based on latency, throughput requirements, and so on. Physical constrainst such as user or on-premises resources drive locaiton options, ehich can be offset using edge tecniques or resource placement.
+        
+        Review
+        Quando realizamos a arquitetura de soluções temos algumas opções a escolher, entretanto, ao longo do tempo novas tecnlogias são lançadas e outras formas de atender o worload podem estar disponíveis as quais podem melhorar a eficiência de performance.
+
