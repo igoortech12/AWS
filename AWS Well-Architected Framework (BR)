@@ -201,3 +201,45 @@ Seção 4: Confiabilidade
         Shield
         Cloud Formation
         Auto Scaling
+
+Seção 5: Eficiência de Performance
+    5. Pilar de Eficiência de Performance
+        O pilar de eficiência de performance se concentra no uso eficiente de recursos de TI e computação.
+
+        Disign Principles
+        Democratize advanced technologies (Democratizar tecnologias avançadas)
+        Go global in minute (Torne-se global em minutos)
+        Use serverless architecture (Utilize arquitetura de computação sem servidores)
+        Experiment more often (Experimente com mais frequência)
+        Mechanical symplethy (Simpatia mecânica)
+
+        Selection
+        A melhor solução para um sistema em particular irá variar baseado no tipo de workload, frequentemente com múltiplas soluções combinadas.
+        Um sistema bem arquitetado pode utilizar múltiplas soluções para habilitar diferentes features e aumentar a performance.
+        Atravpes das opções de serviços da nuvem pode mser escolhidos aquels que melhor atendem o worload, deferente das rewstrições on-primises onde fazemos a seleção muitas vezes baseado em investimentos anteriores.
+
+        Questões
+        PERF 1: How do you select the best performing architecture?
+            Often, multiple approaches are required to get optmal performance across a workload. Well-architected system use multiple solutions and enable different features to improve performance.
+
+        Compute
+        A escolha de uma solução de compute (computação) pode varias de acordo com a design da aplicação, padrão de uso e configureções requeridas. A arquiteture pode utilizar diferentes soluções de computação para vários componentes habilitatnto features para aumentar a perfomance.
+        A solução de computação errada de irá levar a aplicação e auma baixa eficiência de performance.
+        Opções de Computação da AWS: Instances - EC2; Containers - ECS; Functions - Lambda.
+
+        Questões:
+        PERF 2: How do you select your computer solution?
+            The optimal compute solution for a system varies based on application design, usage patterns, and configuration settings. Architectures may use different compute solutions performance. Selecting the wrong compute soluiton for an architecture can lead to lower performance efficiency.
+
+        Storage
+        A solução mais otimizada de storage irá variar conforma a sistema em particular e método de acesso requerido (bloco, arquivo, objeto), padrões de acesso (randomico ou sequencial), throughput, frequência de acesso (online, offline, archival), frequência de update (WORM, dynamic), e características de disponibilidade e durabilidade dos dados.
+        Na AWS você irá encontrar soluções de storage virtualizada para atender uma grende gama de workload. Utilizando o S3 (Object Storage), EBS (HDD ou SSD), EFS (Elastic File System), entre outros, os quais podem ser facilmente criados, expandidos, clonados e desprovisionados conforme a demanda.
+
+        Questões:
+        PERF 3: How do you select your storage solutions?
+        The optimal storage solution for a system varies based on the kind of access method (block, file, or object), patterns of access (random or sequential), required throughput, frequency of access (online, offline, archival), frequency of update (WORM, dynamic), and availability and durability constraints. Well-architected system use multiple storage soluitons and enable different features to improve performance and use resources efficiently.
+
+        Database
+        A solução mais otimizada de banco de dados irá variar conforme o requeirmento de disponibilidade, consistência, tolerância de partição, latência, durabilidade, escalabilidade e tipos de consulta (query).
+        Muitos sistemas usam diferentes tipos de bancos para atender variados cenários de performance.
+        Na AWS você irá encontrar soluções de banco de dados para atender todos os tipos de worload. Amazon RDS como um banco de dados genreciado para SQL. DynamoDB para NoSQL com alta performance, escalabilidade e baixa latência. AmazonRedshift para data warehouse na ordem de petabytes. Amazon Neptune para Graph. Amazon Timestream para séries temporais. Elasticache como BD em memória, entre outros.
