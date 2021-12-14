@@ -258,5 +258,32 @@ Seção 5: Eficiência de Performance
             The optimal network soluiton for a system varies based on latency, throughput requirements, and so on. Physical constrainst such as user or on-premises resources drive locaiton options, ehich can be offset using edge tecniques or resource placement.
         
         Review
-        Quando realizamos a arquitetura de soluções temos algumas opções a escolher, entretanto, ao longo do tempo novas tecnlogias são lançadas e outras formas de atender o worload podem estar disponíveis as quais podem melhorar a eficiência de performance.
+        Quando realizamos a arquitetura de soluções temos algumas opções a escolher, entretanto, ao longo do tempo novas tecnlogias são lançadas e outras formas de atender o worload podem estar disponíveis as quais podem melhorar a eficiência de performance da sua arquitetura.
+        Entender onde a arquitetura tem restrições de performance também pode ajudar a focar a análise e dimensionar novas soluções que podem melhor atender o workload.
+
+        Questões:
+        PERF 6: How do you evolve your workload to take advantege of new releases?
+            When architecting workloads, there are finite options that you can chosse from. However, over time, new technologies and approaches become available that could improve the performance of your workload.
+        
+       Monitoring
+       Depois de  impleenter sua arquitetura vocÊ deve moitorar sua performance constantemente para remediar problemas antes de impactar seus clinetes.
+       O monitoramento através de métricas irá indicar por alarmes quanto um threshould foi atingido, devendo automaticamente inicar uma ação de contorne para resolver o problema de performance dos componentes.
+       Garanata que o seu monitoramento não gere muitos falso-positivo ou que sobrecarregue o sistema monitorado com gereção de dados. Ações automotizadas com base em triggers ou threshold evitam erros humanos e podem resolver problemas mais rapidamente. Eventos de testes podem validar a efetividade do monitoramento.
+
+       Questões:
+        PERF 7: How do you monitor your resources to ensure they are performing as expected?
+            System performance can degrade over time. Monitor system performance to identify degradation and remediate internal or external factores, such as the operation system or application load.
+
+        Tradeoffs
+        Quando arquitetamos uma solução precisamos pensar sobre a tradeoff da mesma, ou seja, uma decisão que afeta dois ou mais pontos distintos como a consistencia em leitura/escrte de dados, durabilidade, localidade, tempo de resposta e latencia para entragar com a melhor performance.
+        Utilizando computação em nunvem você pode tornar-se global em minutos, dispondi seus serviços aos usuários com alta performance e disponiblidade. Sejam nos níveis de web, app ou banco de dados.
+        Realizar um tradeoff consistente em uma arquitetura complexa pode requere testes para garantir que os benefícios pretendidos sejam realmente obtidos.
+
+        Questões:
+        PERF 8: How do you use tradeoffs to improve performance?
+            When architecting solutions, actively considering tradeoffs enables you to select an optimla approach. Often you can improve performance by trading consistency, durability, and spcae for time and latency.
+
+        Serviços Chave - CloudWatch
+        O CloudWatch fornence dados e insights práticos para monitor aplicativos, compreender alterações de performance em todos o sistema e reagir a enssas alterações, otimizar a utilização de recursos e obter uma visualização unificada da integridade operacional.
+        O CloudWatch coleta dados de monitoramento e operações na forma de logs, mpétricas e eventos, oferencende uma visualização unificada dos recursos, dos aplicativos e dos serviços da AWS executados na AWS e em servidores locais.
 
