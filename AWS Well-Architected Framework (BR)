@@ -216,15 +216,15 @@ Seção 5: Eficiência de Performance
         Selection
         A melhor solução para um sistema em particular irá variar baseado no tipo de workload, frequentemente com múltiplas soluções combinadas.
         Um sistema bem arquitetado pode utilizar múltiplas soluções para habilitar diferentes features e aumentar a performance.
-        Atravpes das opções de serviços da nuvem pode mser escolhidos aquels que melhor atendem o worload, deferente das rewstrições on-primises onde fazemos a seleção muitas vezes baseado em investimentos anteriores.
+        Atrapes das opções de serviços da nuvem podem ser escolhidos aqueles que melhor atendem o workload, diferente das restrições on-primisses onde fazemos a seleção muitas vezes baseado em investimentos anteriores.
 
         Questões
         PERF 1: How do you select the best performing architecture?
             Often, multiple approaches are required to get optmal performance across a workload. Well-architected system use multiple solutions and enable different features to improve performance.
 
         Compute
-        A escolha de uma solução de compute (computação) pode varias de acordo com a design da aplicação, padrão de uso e configureções requeridas. A arquiteture pode utilizar diferentes soluções de computação para vários componentes habilitatnto features para aumentar a perfomance.
-        A solução de computação errada de irá levar a aplicação e auma baixa eficiência de performance.
+        A escolha de uma solução de compute (computação) pode varias de acordo com a design da aplicação, padrão de uso e configureções requeridas. A arquiteture pode utilizar diferentes soluções de computação para vários componentes habilitando features para aumentar a perfomance.
+        A solução de computação errada de irá levar a aplicação a uma baixa eficiência de performance.
         Opções de Computação da AWS: Instances - EC2; Containers - ECS; Functions - Lambda.
 
         Questões:
@@ -232,12 +232,12 @@ Seção 5: Eficiência de Performance
             The optimal compute solution for a system varies based on application design, usage patterns, and configuration settings. Architectures may use different compute solutions performance. Selecting the wrong compute soluiton for an architecture can lead to lower performance efficiency.
 
         Storage
-        A solução mais otimizada de storage irá variar conforma a sistema em particular e método de acesso requerido (bloco, arquivo, objeto), padrões de acesso (randomico ou sequencial), throughput, frequência de acesso (online, offline, archival), frequência de update (WORM, dynamic), e características de disponibilidade e durabilidade dos dados.
-        Na AWS você irá encontrar soluções de storage virtualizada para atender uma grende gama de workload. Utilizando o S3 (Object Storage), EBS (HDD ou SSD), EFS (Elastic File System), entre outros, os quais podem ser facilmente criados, expandidos, clonados e desprovisionados conforme a demanda.
+        A solução mais otimizada de storage irá variar conforme o sistema em particular e método de acesso requerido (bloco, arquivo, objeto), padrões de acesso (randomico ou sequencial), throughput, frequência de acesso (online, offline, archival), frequência de update (WORM, dynamic), e características de disponibilidade e durabilidade dos dados.
+        Na AWS você irá encontrar soluções de storage virtualizada para atender uma grande gama de workload. Utilizando o S3 (Object Storage), EBS (HDD ou SSD), EFS (Elastic File System), entre outros, os quais podem ser facilmente criados, expandidos, clonados e desprovisionados conforme a demanda.
 
         Questões:
         PERF 3: How do you select your storage solutions?
-            The optimal storage solution for a system varies based on the kind of access method (block, file, or object), patterns of access (random or sequential), required throughput, frequency of access (online, offline, archival), frequency of update (WORM, dynamic), and availability and durability constraints. Well-architected system use multiple storage soluitons and enable different features to improve performance and use resources efficiently.
+            The optimal storage solution for a system varies based on the kind of access method (block, file, or object), patterns of access (random or sequential), required throughput, frequency of access (online, offline, archival), frequency of update (WORM, dynamic), and availability and durability constraints. Well-architected system use multiple storage solutions and enable different features to improve performance and use resources efficiently.
 
         Database
         A solução mais otimizada de banco de dados irá variar conforme o requeirmento de disponibilidade, consistência, tolerância de partição, latência, durabilidade, escalabilidade e tipos de consulta (query).
@@ -246,7 +246,7 @@ Seção 5: Eficiência de Performance
 
         Questões:
         PERF 4: How do you select your database solution?
-            The optimal database solution for a system varies based on requirements for availability, consistency, partition tolerance, latency, durability, and query capability. Many systems use different database solutions for various sub-systems and enabçe different features to improve performance. Selecting the wrong database solution and features for a system can lead to lower performance efficiency.
+            The optimal database solution for a system varies based on requirements for availability, consistency, partition tolerance, latency, durability, and query capability. Many systems use different database solutions for various sub-systems and enable different features to improve performance. Selecting the wrong database solution and features for a system can lead to lower performance efficiency.
 
         Network
         A solução mais timizada de rede irá variar conforma a sistema em particular baseado em requisitos de latência e throughput (largura de banda). Restrições físicas de rede são removidas se comparadas ao mundo on-premises.
@@ -266,24 +266,24 @@ Seção 5: Eficiência de Performance
             When architecting workloads, there are finite options that you can chosse from. However, over time, new technologies and approaches become available that could improve the performance of your workload.
         
        Monitoring
-       Depois de  impleenter sua arquitetura vocÊ deve moitorar sua performance constantemente para remediar problemas antes de impactar seus clinetes.
+       Depois de  implementar sua arquitetura vocÊ deve moitorar sua performance constantemente para remediar problemas antes de impactar seus clientes.
        O monitoramento através de métricas irá indicar por alarmes quanto um threshould foi atingido, devendo automaticamente inicar uma ação de contorne para resolver o problema de performance dos componentes.
-       Garanata que o seu monitoramento não gere muitos falso-positivo ou que sobrecarregue o sistema monitorado com gereção de dados. Ações automotizadas com base em triggers ou threshold evitam erros humanos e podem resolver problemas mais rapidamente. Eventos de testes podem validar a efetividade do monitoramento.
+       Garanta que o seu monitoramento não gere muitos falso-positivo ou que sobrecarregue o sistema monitorado com gereção de dados. Ações automotizadas com base em triggers ou threshold evitam erros humanos e podem resolver problemas mais rapidamente. Eventos de testes podem validar a efetividade do monitoramento.
 
        Questões:
         PERF 7: How do you monitor your resources to ensure they are performing as expected?
             System performance can degrade over time. Monitor system performance to identify degradation and remediate internal or external factores, such as the operation system or application load.
 
         Tradeoffs
-        Quando arquitetamos uma solução precisamos pensar sobre a tradeoff da mesma, ou seja, uma decisão que afeta dois ou mais pontos distintos como a consistencia em leitura/escrte de dados, durabilidade, localidade, tempo de resposta e latencia para entragar com a melhor performance.
-        Utilizando computação em nunvem você pode tornar-se global em minutos, dispondi seus serviços aos usuários com alta performance e disponiblidade. Sejam nos níveis de web, app ou banco de dados.
+        Quando arquitetamos uma solução precisamos pensar sobre a tradeoff da mesma, ou seja, uma decisão que afeta dois ou mais pontos distintos como a consistencia em leitura/escrita de dados, durabilidade, localidade, tempo de resposta e latencia para entregar com a melhor performance.
+        Utilizando computação em nuvem você pode tornar-se global em minutos, dispondi seus serviços aos usuários com alta performance e disponiblidade. Sejam nos níveis de web, app ou banco de dados.
         Realizar um tradeoff consistente em uma arquitetura complexa pode requere testes para garantir que os benefícios pretendidos sejam realmente obtidos.
 
         Questões:
         PERF 8: How do you use tradeoffs to improve performance?
-            When architecting solutions, actively considering tradeoffs enables you to select an optimla approach. Often you can improve performance by trading consistency, durability, and spcae for time and latency.
+            When architecting solutions, actively considering tradeoffs enables you to select an optimal approach. Often you can improve performance by trading consistency, durability, and spcae for time and latency.
 
         Serviços Chave - CloudWatch
-        O CloudWatch fornence dados e insights práticos para monitor aplicativos, compreender alterações de performance em todos o sistema e reagir a enssas alterações, otimizar a utilização de recursos e obter uma visualização unificada da integridade operacional.
-        O CloudWatch coleta dados de monitoramento e operações na forma de logs, mpétricas e eventos, oferencende uma visualização unificada dos recursos, dos aplicativos e dos serviços da AWS executados na AWS e em servidores locais.
+        O CloudWatch fornence dados e insights práticos para monitor aplicativos, compreender alterações de performance em todos o sistema e reagir a essas alterações, otimizar a utilização de recursos e obter uma visualização unificada da integridade operacional.
+        O CloudWatch coleta dados de monitoramento e operações na forma de logs, métricas e eventos, oferencende uma visualização unificada dos recursos, dos aplicativos e dos serviços da AWS executados na AWS e em servidores locais.
 
