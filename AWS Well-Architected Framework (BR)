@@ -287,3 +287,21 @@ Seção 5: Eficiência de Performance
         O CloudWatch fornence dados e insights práticos para monitor aplicativos, compreender alterações de performance em todos o sistema e reagir a essas alterações, otimizar a utilização de recursos e obter uma visualização unificada da integridade operacional.
         O CloudWatch coleta dados de monitoramento e operações na forma de logs, métricas e eventos, oferencende uma visualização unificada dos recursos, dos aplicativos e dos serviços da AWS executados na AWS e em servidores locais.
 
+Seção 6: Otimização de Custos
+    6. Pilar de Otimização de Custos
+        O pilar de otimização de custos inclui a habildiade de executar sistemas para entregar valro ao negócio através de menor preço disponível.
+
+        Design Principles
+        Adopt a consumption model (Adotar um modelo de consumo)
+        Measure overall efficiency (Avaliar a eficiência global)
+        Stop spending money on data center operations (Parar de gatar dinheiro com operações de data center)
+        Analyse and attribute expenditure (Analisar e atribuir despesas)
+        Use managed and application level services to reduce cost of ownership (Usar serviços gerenciados e de nível de aplicação para reduzir a custo total de propriedade)
+
+        Expenditure Awareness
+        Em cloud computing as restrições de hardware são removidas, podendo ser provisionado um númeor virtualmente ilimitado de recursos.
+        Todo o time deve ser treinado sorbe o uso de recursos de forma consciente visinda evitar gastos desnecessários.
+        Custos devem ser associados a departamentos, projetos, sistemas a áreas de negócio.
+        O uso de TAGs é essencial para controle dos gastos, sendo acompanhado através do Cost Explorer.
+        O AWS Budgest pode ser utilizado para controlar os custos dos serviços atuais e pevisão futura.
+        
