@@ -1,0 +1,116 @@
+Learning course Fundamentos em AWS in the ESCOLA DA NUVEM.
+
+url: https://www.escoladanuvem.org
+
+Prof.: Eduardo Lara
+
+AULA 1 - 
+
+AWS Cloud Practitioner: https://aws.amazon.com/pt/certification/certified-cloud-practitioner/?ch=tile&tile=getstarted
+
+Visão Geral AWS
+Computação
+    EC2
+    EC2 AUTO
+    ELASTIC
+    LAMBDA
+
+Redes e Entregas de Conteúdo
+    VPC
+    ROUTE 53
+    CLOUDFORNT
+    LOAD BALANCIG
+
+Gerenciament e Governança
+    CloudWatch
+    Auto Scaling
+    Trsuted Advisor
+    Organizations
+    CloudFormation
+    Config
+    CloudTrail
+
+Banco de Dados
+    RDS 
+    DynamoDB
+
+Segurança, Identidade e Compliance
+    Identity @ Access Management 
+    WAF
+    Shield
+    Artifact
+
+Gerencimamento de Custos
+    Calculadoras 
+.
+.
+.
+
+Computação em nuvem
+    É a entrega sob demanda de recursos computacionais, atra´ves de uma plataforma de serviços via internet,...
+
+Vantagens da Computação na nuvem
+    1.Save Money
+    2.Stop Guessing
+    3.Variable Expenses
+    4.Economies of Scale
+    5.Increase Speed and Agility
+    6.Go Global
+
+IaaS, SaaS e PaaS
+    Modelos de Computador
+        Infraestrutura como serviço
+        Plataforma como serviço
+        Software como serviço
+       
+
+    On Premises
+        Network
+        Storage
+        Servers
+        O/S
+        Dados
+        App
+    
+    IaaS
+    Hospedar
+    App
+    Dados
+    O/S 
+
+    PaaS
+    
+    App
+    Dados
+
+
+Escalabilidade x Eslasticidade
+Escalabilidade é aumentar/diminuir numeors de instâncias
+Eslasticidade é aumentar/diminuir os recursos computacionais
+
+Infraestrutura Global
+Uma região é a disponiblidade de uma coleção de recurso AWS em uma localização geografica, sendo ele composto por um conjunto de zonas de disponiblidade.
+    Região é um conjunto de data centers em uma localização geográfica.
+
+Uma zona de disponiblidade é um ou mais datas centes que estao na mesma região, porem separadas por uma distância significativa, atuando de forma independentes em casos de falhas de uma zona.
+
+Um ponto de presença é uma infraestrutura de servidores, localizados proximo de uma ZD, que armazena os dados mais solicitados...
+
+Serviços Regionais e Serviçõs Globais
+SR:
+    EC2, LAMBDA, ELASTIC BEANSTALK, EC2 AUTO SCALING 
+SG:
+    CLOUDFRONT, ROUTE 53, WAF, ACCESS MANAGEMENT 
+
+Responsabilidade Compartilhada - https://aws.amazon.com/pt/compliance/shared-responsibility-model/
+Enquanto AWS gerencia a segunraça da nunvem, voc~e é reponsavel pela segurança na nuvem.
+
+SECURITY OF - AWS
+SECURITY IN - CUSTOMER (YOU)
+
+CERTIFICAÇÃO
+Iso 27001: Disponibilidade, confidencialidade e integridade.
+
+Recursos gerenciados
+Um recurso gerenciado é quando um serviço ...
+
