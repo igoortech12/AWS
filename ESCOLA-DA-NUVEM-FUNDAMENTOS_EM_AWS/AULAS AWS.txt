@@ -114,3 +114,28 @@ Iso 27001: Disponibilidade, confidencialidade e integridade.
 Recursos gerenciados
 Um recurso gerenciado é quando um serviço ...
 
+AULA 02 - 
+
+PLANOS DE SUPORTE: https://aws.amazon.com/pt/premiumsupport/plans/
+
+Case de suporte técnico nao sao oferecidos no plano basico
+Trsuted Advisor complet soment nos planos Bussiness, enterprise on-ramp, enterprise
+suporte em ate 15min, apenas plano enterprise
+tam e consierge apenas no plano enterprise.
+
+Interfaces de Acesso da AWS
+    AWS Management Console
+        AWS Console Mobile App
+    Command Line Interface (CLI)
+    Software Development Kit (SDK)
+
+Dicas do exame:
+3 interfaces de conexao
+    CONSOLE GERENCIAMENTO AWD (VIA HTTP E APP)
+    AWD Command LINE Interface (via terminal)
+    Software Development kIT (via API)
+
+DESCRIÇÃO
+
+O AWS budgets (orçamentos da aws) permite que você defina orçamentops personalizados
+
