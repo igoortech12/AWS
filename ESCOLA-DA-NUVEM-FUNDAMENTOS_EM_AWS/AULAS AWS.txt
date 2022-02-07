@@ -150,3 +150,52 @@ DESCRIÇÃO - AWS Budgets (Orçamentos da AWS)
 
 
 
+AULA 3 - IAM
+AWS IDENTITY AND ACCESS MANAGEMENT
+
+Users, Groups & Roles
+    Usuários: 
+        Pessoa ou serviço, com credenciais permanentes.
+        Não compartilhe o usuário root & use o least privilege.
+
+    Grupos:
+        Coletivo de Usuários.
+        Grupos não podem conter outros grupos.
+    
+    Funções:
+        Não são suas permissões.
+        É um método de autenticação temporária.
+
+Regra básica
+    autenticação: usuário, grupos e Funções.
+    autorização: políticas e permissões.
+
+Autorizar: Políticas e permissões
+    Documento JSON que define as permissões de acesso.
+
+API Engine
+    AWS IAM: autenticação
+
+Dicas de exame
+    Usuários possuem credencias permanentes e funções possuem credenciais temporárias.
+    Usuários root NÃO devem ser compartilhados.
+
+AWS WAF
+    Firewall de aplicativos web que permite especificar qual tráfego tem o seu acesso permitido...
+
+    Características
+        Filtrat o tráfego com regras (Web Acl) - Camada 7 HTTP.
+        Bloquear requisições malicioasa como SQL injection (SQLi) e cross-site scripting (XSS).
+        Bloquear países (geo-match), size constraints e rate-rules.
+    
+Dica de exame
+    WAF é um Firewall de aplicação Web
+    Atua na camada 7 - HTTP
+    Bloqueia SQL injection (SQLi) e cross-site scripting (XSS)
+    Geo-match (bloqueio países), size constraints e rate based-rules.
+
+AWS SHIELD - STANDARD E ADVANCED
+
+    DDoS - Distributed Denial of Service
+
+    
