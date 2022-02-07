@@ -118,24 +118,35 @@ AULA 02 -
 
 PLANOS DE SUPORTE: https://aws.amazon.com/pt/premiumsupport/plans/
 
-Case de suporte técnico nao sao oferecidos no plano basico
-Trsuted Advisor complet soment nos planos Bussiness, enterprise on-ramp, enterprise
-suporte em ate 15min, apenas plano enterprise
-tam e consierge apenas no plano enterprise.
+Dicas de exame:
+    Case de suporte técnico nao sao oferecidos no plano basico
+    Trsuted Advisor complet soment nos planos Bussiness, enterprise on-ramp, enterprise
+    Suporte em ate 15min, apenas plano enterprise
+    TAM e Consierge apenas no plano enterprise.
 
 Interfaces de Acesso da AWS
     AWS Management Console
         AWS Console Mobile App
     Command Line Interface (CLI)
     Software Development Kit (SDK)
+        JavaScript
+        Python(boto)
+        PHP
+        GoNode.js 
+        C++
+        .NET
+        Ruby
+        Java 
 
 Dicas do exame:
-3 interfaces de conexao
+3 interfaces de conexão
     CONSOLE GERENCIAMENTO AWD (VIA HTTP E APP)
     AWD Command LINE Interface (via terminal)
     Software Development kIT (via API)
 
-DESCRIÇÃO
+DESCRIÇÃO - AWS Budgets (Orçamentos da AWS)
+    O AWS budgets (orçamentos da aws) permite que você defina orçamentos personalizados para rastrear seu custo e uso.
+    Você pode escolher ser alertado pro e-mail ou notificação SMS quando o custo real ou previsto e o uso excederem o limite do seu orçamento.
 
-O AWS budgets (orçamentos da aws) permite que você defina orçamentops personalizados
+
 
