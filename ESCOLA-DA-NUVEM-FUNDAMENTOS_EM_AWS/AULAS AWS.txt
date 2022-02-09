@@ -198,4 +198,83 @@ AWS SHIELD - STANDARD E ADVANCED
 
     DDoS - Distributed Denial of Service
 
+
+AULA 4 - AMAZON EC2
+
+LUNCH TYPES
+    SOB DEMANDA 
+    .
+    .
+    .
+
+ON-DEMAND INSTANCES
+    SOB DEMANDA
+        Alto custo se usado por longo prazo 
+        Cobrança o que usar (por horas ou segundo)
+        Sem compromisso de uso (anos)
+        Sem pagamento adiantado
+        Pode aumentar ou diminuir a capacidade computacional
+
+        ÚTIL: Carga de trabalho de curto prazo, validar hipóteses, com pico de utilização pre...
+
+RESERVED INSTANCES
+    INSTÂNCIA RESERVADAS
+        Até 75% desconto comparação instância por demanda.
+        Aplicações que exige capacidade reservada
+        Comprometimento de uso da instância por um período de 01 ou 03 anos
+        Possui pagamento adiantado
+
+        ÚTIL: Ambiente de produção que foi testado e não será modificado aplicações que precisar ser estado constante; excelente para banco de dados.
+
+DEDICATED HOST
+    HOST DEDICADO
+        Hardware Dedicado 
+        Servidor físico EC2 exclusivo para você
+        Cumprir requisitos de conformidade
+
+    Vesibilidade de soquetes, núcleos, IDs de HOST
+    Compeometimento por um período de 03 anos
+    Pode ser comprado sob demanda de horas
+    Se optar por reserva, até 70% desconto em comparação com instância por demanda.
+
+    ÚTIL: ...
+
+DEDICATED INSTANCES
+    INSTÂNCIA DEDICADA
+        Hardware Dedicado
+        Pode compartilhar o hardware com outrs instâncias, na mesmo constante
+        Não tem controle sobre o posicionamento da instâcia (você só pode movimentar o hardware se interromper e reiniciar)
+        .
+        .
+
+SPOT INSTANCES
+    INSTÂNCIAS SPOT
+        Até 90% desconto comparação instância por demanda
+        São terminadas quando o preço do spot, é maior do que o preço que você estabelece para pagar.
+        Memorize como leilão de instâncias
+        Terminate = (preço spot AWS > seu preço)
+        Não utilize para trabalhos críticos e bancos de dados
+
+        ÚTIL: Quando vocÊ tem urgência de grande capacidade computacionais, workloads...
+
+AWS AUTO SCALING GROUP 
+Para que precisamos?
+    Escalabilidade...
+    Scale Out (adicionar instancia)
+    Scale In (remove instânica)
     
+
+
+AWS ELASTIC BEANSTALK
+DEFINIÇÃO
+    O AWS ELASTIC BEANSTALK é um serviço gerenciado, para os desenvolvedores realizarem uma fácil utilização de implantação...
+
+AWS LAMBDA
+DEFINIÇÃO
+    O AWS Lambda permite que você execute códigos sem provisionar ou gerenciar servidores, pagando apenas pelo numeros de solicitações e pelo tempo de computação que vocÊ utilizar.
+
+CARACTERÍSTICAS 
+
+LINGUAGENS
+
+
