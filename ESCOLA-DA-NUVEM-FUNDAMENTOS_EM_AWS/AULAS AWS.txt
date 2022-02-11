@@ -8,80 +8,66 @@ AULA 1 -
 
 AWS Cloud Practitioner: https://aws.amazon.com/pt/certification/certified-cloud-practitioner/?ch=tile&tile=getstarted
 
-Visão Geral AWS
+Visão Geral AWS (ALGUNS SERVIÇOS)
 Computação
     EC2
-    EC2 AUTO
-    ELASTIC
-    LAMBDA
+    AMAZON EC2 AUTO SCALING (Escalabilidade)
+    AMAZON ELASTIC BREANSTALK (Elásticidade)
+    AMAZON LAMBDA
 
 Redes e Entregas de Conteúdo
-    VPC
-    ROUTE 53
-    CLOUDFORNT
-    LOAD BALANCIG
+    AMAZON VPC
+    AMAZON ROUTE 53
+    AMAZON CLOUDFORNT
+    ELASTIC LOAD BALANCIG
 
-Gerenciament e Governança
-    CloudWatch
-    Auto Scaling
-    Trsuted Advisor
-    Organizations
-    CloudFormation
-    Config
-    CloudTrail
+Gerenciamento e Governança
+    AMAZON CloudWatch
+    AWS Auto Scaling
+    AWS Trusted Advisor
+    AWS Organizations
+    AWS CloudFormation
+    AWS Config
+    AWS CloudTrail
 
 Banco de Dados
-    RDS 
-    DynamoDB
+    AMAZON RDS 
+    AMAZON DynamoDB
 
 Segurança, Identidade e Compliance
-    Identity @ Access Management 
-    WAF
-    Shield
-    Artifact
+    AWS Identity & Access Management 
+    AWS WAF
+    AWS Shield
+    AWS Artifact
 
 Gerencimamento de Custos
     Calculadoras 
-.
-.
-.
+    AWS Calculadoras
+    AWS Cost Explorer
+    AWS Orçamentos
+
+Armazenamentos
+    Amazon S3
+    Amazon EBS 
+    S3 Glacier
+    Familía Snow
 
 Computação em nuvem
-    É a entrega sob demanda de recursos computacionais, atra´ves de uma plataforma de serviços via internet,...
+    "É a entrega sob demanda de recursos computacionais, atra´ves de uma plataforma de serviços via internet,sem gerenciamento ativo de usuário."
 
 Vantagens da Computação na nuvem
-    1.Save Money
-    2.Stop Guessing
-    3.Variable Expenses
-    4.Economies of Scale
-    5.Increase Speed and Agility
-    6.Go Global
+    1.Save Money: Economia de dinheiro. Paga apenos por aquilo que usar.
+    2.Stop Guessing: Com computação em nuvem é possível alterar as configurações da instância a qualquer momento. Usa-se o recurso é necessário naquele instante.
+    3.Variable Expenses: Despesa variável. Paga só no momento que usar o serviço. Sem taxa fixa.
+    4.Economies of Scale: Possibilidade de custa mais barato no momento em quê mais clinetes usam o mesmo serviço. Quanto mais gente usando, mais barato o serviço pode ficar.
+    5.Increase Speed and Agility: Agilidade nas alterações no serviço. Ex: Aumentar ou diminuir processamento/memória/armazenamento, etc.
+    6.Go Global: Velocidade de acesso a nuvem. 
 
 IaaS, SaaS e PaaS
     Modelos de Computador
-        Infraestrutura como serviço
-        Plataforma como serviço
-        Software como serviço
-       
-
-    On Premises
-        Network
-        Storage
-        Servers
-        O/S
-        Dados
-        App
-    
-    IaaS
-    Hospedar
-    App
-    Dados
-    O/S 
-
-    PaaS
-    
-    App
-    Dados
+        Infraestrutura como serviço: Fornecimento de uma infraestrura para uso. Apenas responsabilidade pela infraestrutura. O usário é responsável pelo sistema e aplicações de sua necessidade.
+        Plataforma como serviço: Serviço responsável pela infraestrutura e sistema operacional. O usuário apenas roda suas aplicações.
+        Software como serviço: Serviço responsável por tudo. Infra/SO/Aplicativos. O usuário apenas usa o serviço.
 
 
 Escalabilidade x Eslasticidade
