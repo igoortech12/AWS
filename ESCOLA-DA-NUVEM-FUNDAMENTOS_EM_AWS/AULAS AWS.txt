@@ -71,25 +71,43 @@ IaaS, SaaS e PaaS
 
 
 Escalabilidade x Eslasticidade
-Escalabilidade é aumentar/diminuir numeors de instâncias
-Eslasticidade é aumentar/diminuir os recursos computacionais
+Escalabilidade é aumentar/diminuir números de instâncias
+Elasticidade é aumentar/diminuir os recursos computacionais. Ex Serviços AWS: Amazon EC2, Elastic Load Balancing, AWS Elastic Beanstalk, Amazon Elastic Cache
+    Benfícios
+        Melhoraa disponiblidade
+        Obter um ambiente tolerante a falhas
+        Refletir ns custos operacionais
 
-Infraestrutura Global
-Uma região é a disponiblidade de uma coleção de recurso AWS em uma localização geografica, sendo ele composto por um conjunto de zonas de disponiblidade.
-    Região é um conjunto de data centers em uma localização geográfica.
+Infraestrutura Global da AWS
+    DEFINIÇÃO REGIÃO:
+        Uma região é a disponiblidade de uma coleção de recurso AWS em uma localização geografica, sendo ele composto por um conjunto de zonas de disponiblidade.
+        Região é um conjunto de data centers em uma localização geográfica.
 
-Uma zona de disponiblidade é um ou mais datas centes que estao na mesma região, porem separadas por uma distância significativa, atuando de forma independentes em casos de falhas de uma zona.
+    DEFINIÇÃO ZONA DE DISPONIBILIDADE:
+        Uma zona de disponiblidade é um ou mais datas centes que estao na mesma região, porem separadas por uma distância significativa, atuando de forma independentes em casos de falhas de uma zona.
 
-Um ponto de presença é uma infraestrutura de servidores, localizados proximo de uma ZD, que armazena os dados mais solicitados...
+    DEFINIÇÃO PONTO DE PRESENÇA:
+        Um ponto de presença é uma infraestrutura de servidores, localizados proximo de uma zona de disponibilidade, que armazena os dados 
+        mais solicitados no cache, para entregar com menor latência uma requisição de consulta. Ex: PoPs - São utilizados como cache de dados para distribuição de conteúdo.
+
+DICA DE EXAME:
+    REGIÃO é um conjunto de data centers em uma localização geográfica.
+    Cada REGIÃO possui um conjunto de ZONAS DE DISPONIBILIDADE.
+    ZONA DE DISPONIBILIDADE estão distintos a quilômetro de distância uma das outras, conectadas com alta velocidade, comsegurança local, refigeração e podem ser um ou mais data centers.
+    Edge Location ou PoPs são utilizados como cache de dados para distribuição de conteúdo.
 
 Serviços Regionais e Serviçõs Globais
 SR:
+    Computação:
     EC2, LAMBDA, ELASTIC BEANSTALK, EC2 AUTO SCALING 
 SG:
-    CLOUDFRONT, ROUTE 53, WAF, ACCESS MANAGEMENT 
+    Redes e Entregas de Conteúdo:
+    CLOUDFRONT, ROUTE 53
+    Segurança, Identidade e Compliance 
+    WAF, ACCESS MANAGEMENT 
 
 Responsabilidade Compartilhada - https://aws.amazon.com/pt/compliance/shared-responsibility-model/
-Enquanto AWS gerencia a segunraça da nunvem, voc~e é reponsavel pela segurança na nuvem.
+Enquanto AWS gerencia a segurança DA nuvem, VOCÊ é reponsavel pela segurança NA nuvem.
 
 SECURITY OF - AWS
 SECURITY IN - CUSTOMER (YOU)
@@ -97,8 +115,9 @@ SECURITY IN - CUSTOMER (YOU)
 CERTIFICAÇÃO
 Iso 27001: Disponibilidade, confidencialidade e integridade.
 
-Recursos gerenciados
-Um recurso gerenciado é quando um serviço ...
+DICA DE EXAME:
+Um recurso deixa de ser gerenciado por você quando a outra parte inicia o gerenciamento, as atualizações, a manutenção do sistema operacional e a segurança.
+
 
 AULA 02 - 
 
@@ -134,15 +153,18 @@ DESCRIÇÃO - AWS Budgets (Orçamentos da AWS)
     O AWS budgets (orçamentos da aws) permite que você defina orçamentos personalizados para rastrear seu custo e uso.
     Você pode escolher ser alertado pro e-mail ou notificação SMS quando o custo real ou previsto e o uso excederem o limite do seu orçamento.
 
+DESCRIÇÃO - AWS Cost Explorer
+    O AWS Cost Explorer tem uma interface fácil de  usar que permite visualizar, entender e gerenciar os custos e o uso da AWS ao logo do tempo.
 
+AWS Pricing Calculation: https://calculator.aws/#/
 
 AULA 3 - IAM
 AWS IDENTITY AND ACCESS MANAGEMENT
 
 Users, Groups & Roles
     Usuários: 
-        Pessoa ou serviço, com credenciais permanentes.
-        Não compartilhe o usuário root & use o least privilege.
+        Pessoa ou serviço, com credenciais PERMANENTES.
+        NÃO compartilhe o usuário ROOT & use o LEAST PRIVILLEGE.
 
     Grupos:
         Coletivo de Usuários.
