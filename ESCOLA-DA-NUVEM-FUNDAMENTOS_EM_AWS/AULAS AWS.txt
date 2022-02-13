@@ -187,12 +187,38 @@ API Engine
 Dicas de exame
     Usuários possuem credencias permanentes e funções possuem credenciais temporárias.
     Usuários root NÃO devem ser compartilhados.
+    Use o LEAST PRIVILLEGE PRINCIPLE nos usuários.
+    Documentos JSON definen as permissões de acesso.
+    Grupos contémusuários mas NÃO podem conteroutros grupos.
+
+CRIANDO USER AND GROUP
+>PESQUISAR POR IAM
+>ACESSAR IAM(IDENTITY AND ACCESS MANAGEMENT)
+>NO PAINEL À ESQUERDA, CLICAR EM "USUÁRIOS"
+>CLICAR NO BOTÃO "ADICIONAR USUÁRIO"
+>DÁ NOME PARA O NOVO USUÁRIO
+>DEFINIR TIPO DE CREDENCIAIS 
+>AVANÇAR
+>CRIAR UM GRUPO OU ASSOCIAR O NOVO USUÁRIO À ALGUM GRUPO JÁ EXISTENTE
+
+>"CRIAR GRUPO"
+>DEFINIR NOME PARA O NOVO GRUPO (SEM POLÍTICA)
+>CLICAR NO BOTÃO "CRIAR GRUPO"
+>AINDA EM "GRUPOS DE USUÁRIOS", CLICAR NONE DO NOVO GRUPO PARA ADICIONAR USUÁRIOS PARTICIPANTES
+>CLICAR EM "ADICIONAR USUÁRIOS"
+
+ADICIONANDO POLÍTICAS DE PERMISSÕES 
+>EM "GRUPOS DE USUÁRIOS", CLICAR NO NOME DO GRUPO QUE RECEBERÁ A NOVA PERMISSÃO
+>CLICAR NA ABA "PERMISSÕES"
+>CLICAR EM ADICIONAR PERMISSÕES, E ESCOLHER A OPÇÃO ANEXAR POLÍTICA
+>PESQUISAR PELA PERMISSÃO QUE O GRUPO TERÁ ACESSO. POR EXEMPLO: AmazonS3ReadOnlyAccess
+
 
 AWS WAF
-    Firewall de aplicativos web que permite especificar qual tráfego tem o seu acesso permitido...
-
+    Firewall de aplicativos web que permite especificar qual tráfego tem o seu acesso permitido OU bloqueado, mediante a definição de regras personalizáveis.
+    
     Características
-        Filtrat o tráfego com regras (Web Acl) - Camada 7 HTTP.
+        Filtrar o tráfego com regras (Web Acl) - Camada 7 HTTP.
         Bloquear requisições malicioasa como SQL injection (SQLi) e cross-site scripting (XSS).
         Bloquear países (geo-match), size constraints e rate-rules.
     
@@ -200,20 +226,95 @@ Dica de exame
     WAF é um Firewall de aplicação Web
     Atua na camada 7 - HTTP
     Bloqueia SQL injection (SQLi) e cross-site scripting (XSS)
-    Geo-match (bloqueio países), size constraints e rate based-rules.
+    Geo-match (bloqueio países), size constraints (limita tamanho das requisições) e rate based-rules (limita quantidade de requisições por segundo).
 
 AWS SHIELD - STANDARD E ADVANCED
 
     DDoS - Distributed Denial of Service
 
+    AWS SHIELD STANDARD
+        Gratuito para todos os clientes AWS
+        Proteção SYN/UDP Floods. Reflection Attacks
+        Outros ataques na cama 3 e camada 4
+    
+    AWS SHIELD ADVANCED
+        Serviço pago 
+        Suporte 24x7
+        Proteção extra nos serviços: Amazon EC2, Elastic Load Balancing(ELB), Amazon CloudFront, AWS Global Accelerator e o Router 53.
+
+DICAS DO EXAME:
+    AWS Shield é para mitigar ataques DDoS
+    Standard é gratuito para todos
+    Advanced é pago, suporte 24x7e possuiproteção extra em determinados serviços
 
 AULA 4 - AMAZON EC2
 
+CARACTERÍSTICAS:
+    Amazon EC2 -> Elastic Compute Cloud
+    Modelo Infraestrutura como Serviço
+    Alugar máquina virtuais (EC2)
+    Armazenar dados em volumes virtuais (EBS)
+    Distribuir a carga de trabalho (ELB)
+    Escalar o serviço de acordo com a demanda (ASG)
+
+    Serviços:
+        Amazon EC2
+        Amazon Elastic Block Software
+        Elastic Load Balancing
+        Amazon EC2 Auto Scaling
+
+CONEXÕES E ACESSO
+    AUTENTICAÇÃO E AUTORIZAÇÃO 
+    
+TIPOS DE INSTÂNCIA
+    Ver imagens: TIPOS DE INSTANCIAS.PNG E TIPOS DE INSTANCIAS - RESUMO.PNG
+    
+ENTENDENDO A INSTÂNCIA
+    T2.2xlarge
+
+    T=TIPO
+    2=GERAÇÃO
+    T2=FAMÍLIA
+    2xlarge=TAMANHO 
+        .nano
+        .micro
+        .small
+        .medium
+        .large
+        .xlarge
+        .metal
+    
+DICAS DO EXAME:
+    O Amazon EC2 é um serviço web que disponibiliza uma capacidade computacional segura, representado por uma
+instância redimensionável na Nuvem.
+    Modelo Computacional Infrestrutura como Serviço.
+    Ambiente operacional Windows, macOS e Linux.
+    Cobrança por hora ou segundo (mínimo 60 segundos)
+        Hora: Windows
+        Minutos: Linux
+
+ACESSANDO INSTÂNCIA VIA SSH - WINDOWS (VIA TERMINAL PROMPT DE COMANDO OU POWERSHELL)
+Passo 1>Instalar WSL (https://docs.microsoft.com/en-us/windows/wsl/install)
+Passo 2>Acessar Console Web da AWS com seu usuário, senha e MFA(se estiver habilitado).
+Passo 3>Acessar EC2
+Passo 4>Acessar o manu "Instâncias"
+Passo 5>Clicar no Id de instância na coluna "Id de instância"
+Passo 6>Clique no botão "Conectar"
+Passo 7>Clique na aba "Cliente SSH"
+Passo 8>Copier o comando em "Exemplo" (ssh -i "NOME_DA_USA_CHAVE_.PEM" NOME_DO_USUARIO@IP_PUBLICO_DA_INSTÂNCIA)
+Passo 9>No Windows, use o tecla de atalho "TeclaWindows+R" (irá abrir uma pequena janela), digite CMD (ou PowerShell) e clique em OK.
+Ou use a pesquisa e digite CMD (PowerShell).
+Passo 10>No CMD, navegue até o diretório onde encontra-se a sua chave.PEM (chave baixada no ato da criação da instância
+ou anteriormente na catergoria Redes e Segurança/Par de chaves).
+Passo 11>Coler a linha de comando copiado no Passo 8.
+Passo 12>Digite "yes" para permitir o acesso.
+Passo 13>Desfrute da sua máquina na Nuvem. :D
+
 LUNCH TYPES
     SOB DEMANDA 
-    .
-    .
-    .
+    INSTANCIAS RESERVADAS
+    INSTANCIAS SPOT
+    HOST DEDICADO    
 
 ON-DEMAND INSTANCES
     SOB DEMANDA
@@ -223,7 +324,7 @@ ON-DEMAND INSTANCES
         Sem pagamento adiantado
         Pode aumentar ou diminuir a capacidade computacional
 
-        ÚTIL: Carga de trabalho de curto prazo, validar hipóteses, com pico de utilização pre...
+        ÚTIL: Carga de trabalho de curto prazo, validar hipóteses, com pico de utilização previsível, testar e experimentar um ambiente.
 
 RESERVED INSTANCES
     INSTÂNCIA RESERVADAS
@@ -245,15 +346,14 @@ DEDICATED HOST
     Pode ser comprado sob demanda de horas
     Se optar por reserva, até 70% desconto em comparação com instância por demanda.
 
-    ÚTIL: ...
+    ÚTIL: Vincular licenças de software como Windows Server, SQL, ...
 
 DEDICATED INSTANCES
     INSTÂNCIA DEDICADA
         Hardware Dedicado
-        Pode compartilhar o hardware com outrs instâncias, na mesmo constante
+        Pode compartilhar o hardware com outrs instâncias, na mesma conta.
         Não tem controle sobre o posicionamento da instâcia (você só pode movimentar o hardware se interromper e reiniciar)
-        .
-        .
+        Comprometimento por um período de 3 anos.
 
 SPOT INSTANCES
     INSTÂNCIAS SPOT
@@ -263,7 +363,7 @@ SPOT INSTANCES
         Terminate = (preço spot AWS > seu preço)
         Não utilize para trabalhos críticos e bancos de dados
 
-        ÚTIL: Quando vocÊ tem urgência de grande capacidade computacionais, workloads...
+        ÚTIL: Quando vocÊ tem urgência de grande capacidade computacionais, workloads que podem parar e serem iniciados novamente, trabalhos em lot, análise de dados, processamento de imagens.
 
 AWS AUTO SCALING GROUP 
 Para que precisamos?
