@@ -427,3 +427,49 @@ DICAS DO EXAME:
     AWS Lambda dimensiona suas aplicações
     Você pode otimizar o tempo de execução e tamanho de memória 
     Cobrança por número de solicitações de suas funcções e pela duração por cada milissegundo que leva para que seu código seja executado.
+
+AULA 05 - S3 
+
+DEFINIÇÃO:
+    É um serviço gerenciado de armazenamento e recuperação de objetos, respondendo ...
+
+ BENEFÍCIOS AMAZON S3
+    Armazenamento virtualmente ilimitado.
+    Compartilhamento arquivos ou criar um website estático.
+    Armazenar snapshots, backups, gerer um armazenamento híbrido do seu ambiente on-premises.
+    .
+    .
+    .
+
+NOMENCLATURAS
+    Armazenamento = Buckets
+    Arquivos = Objetos 
+    Sub-pastas = ...
+
+USANDO UM BUCKET S3
+    Criar Bucket com nome único global
+    Configurar permissões
+    Enviar dados
+
+Exemplo de URL
+    Memorize a ordem da URL
+    ...
+
+CONHECENDO OBJETOS 
+    Tamanho máximo objeto 5TB
+    Upload > 5 GB use multi-part upload 
+    Metadata (...)
+    Tags (chave e valor...)
+    Versionamento de objetos 
+
+DICAS DO EXAME
+    Amazon S3 é um serviço CORE da AWS
+    Entenda o que é e como ele funciona 
+    Leia os benefícios...
+    .
+    .
+    .
+
+DADOS
+    DEFINIÇÃO: ...
+
