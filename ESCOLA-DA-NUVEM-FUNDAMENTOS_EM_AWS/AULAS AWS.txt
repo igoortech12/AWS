@@ -367,22 +367,63 @@ SPOT INSTANCES
 
 AWS AUTO SCALING GROUP 
 Para que precisamos?
-    Escalabilidade...
-    Scale Out (adicionar instancia)
-    Scale In (remove instânica)
-    
+    Escalabilidade automatizada
+    Scale Out (adicionar instancia) - Coloca instâncias/Expande.
+    Scale In (remove instânica) - Recolhe as instâncias.
 
+DIFERENÇA ENTRE AWS AUTO SCALING E ELASTIC LOAD BALANCING 
+    AWS AUTO SCALING:
+        Acrescenta ou remove instâncias de acordo com o fluxo de acessos.
+    ELASTIC LOAD BALANCING:
+        Aponta o usuário para instância que possui menor fluxo de acesso.
+
+DICAS DO EXAME:
+    Definir uma quantidade MÍNIMA, DESEJÁVEL e MÁXIMA de instâncias.
+    Realiza VERIFICAÇÕES (halth check), finaliza as instâncias NÃO SAUDÁVEIS (unhealthy) e inicia novas.
+    Scale out (AUMENTA com as demandas) e Scale in (DIMINIU quando a demanda deixa de ocorrer).
+    Auto Scaling Group é GRATUITO, você paga apenas pelas instâncias que estão sendo executadas.
 
 AWS ELASTIC BEANSTALK
 DEFINIÇÃO
-    O AWS ELASTIC BEANSTALK é um serviço gerenciado, para os desenvolvedores realizarem uma fácil utilização de implantação...
+    O AWS ELASTIC BEANSTALK é um serviço gerenciado, para os desenvolvedores realizarem uma fácil utilização de implantação e escalabilidade de aplicações e serviços web.
+
+DICAS DO EXAME:
+    Serviço gerenciado e gratuito.
+    Plataforma com Serviço (PaaS).
+    Upload código arquivo <512Mb ou Upload via URL Bucket S3.
+    Balanceamento carga (load balancer).
+    Alta disponibilidade (multi-az).
+    Auto Scaling Group (ASG)
+
+MEMORIZAÇÃO: Você "planta" o código e a AWS conecta os serviços para subir sua aplicação.
 
 AWS LAMBDA
 DEFINIÇÃO
     O AWS Lambda permite que você execute códigos sem provisionar ou gerenciar servidores, pagando apenas pelo numeros de solicitações e pelo tempo de computação que vocÊ utilizar.
 
 CARACTERÍSTICAS 
+    Serverless
+    Escalável
+    Baixo custo
+    Múltiplas linguagens
 
 LINGUAGENS
+    Java
+    Go
+    PowerShell
+    Node.Js 
+    C#
+    Phyton
+    Ruby 
+    {api} - Integração de outras linguagens
 
+FUNCIONAMENTO
+    Upload Código ou Edição Nativa -> Função Lambda -> AWS Lambda -> Pagamento por execução e tempo 
+                                            ^
+    Amazon Simple Storage Service (S3) | Amazon API Gateway | Amazon DynamoDB | Amazon Simple Notification Service | Amazon CloudFront | Modile App                    
 
+DICAS DO EXAME:
+    Serviço serverless e gerenciado pela AWS
+    AWS Lambda dimensiona suas aplicações
+    Você pode otimizar o tempo de execução e tamanho de memória 
+    Cobrança por número de solicitações de suas funcções e pela duração por cada milissegundo que leva para que seu código seja executado.
