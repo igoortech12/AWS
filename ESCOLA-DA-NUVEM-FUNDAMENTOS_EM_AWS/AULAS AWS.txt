@@ -473,3 +473,64 @@ DICAS DO EXAME
 DADOS
     DEFINIÇÃO: ...
 
+
+AULA 06 - VPC, ROUTE 53
+
+AMAZON VPC
+
+DEFINIÇÃO: 
+    Sessão isolada logicamente na nunvem AWS, que permite customizar uma rede virtual e executar recursos, em um ambiente com controle total.
+
+BENEFÍCIOS:
+    Mesmo conceito on-premises
+    Total controle na configuração
+    Oferece camadas de segurança (SG & NACLs)
+    Conectivdade com outros serviços
+
+CONECTIVIDADE:
+
+CARACTERÍSTICAS:
+    Região e Zona de disponibilidade
+    Sub-redes [Pública e Privada]
+    Tabela de Roteamento
+    Internet Gateway [sub-rede pública]
+    Nat Gateway [sub-rede privada]
+    Security Group [SG] e Network Access List [NACLs]
+
+AMAZON ROUTE 53
+
+DEFINIÇÃO
+    Serviço que atua como DNS (Domain Name System), que encaminha as solicitações dos usuários ....
+
+CARACTERÍSTICAS
+    Grenciamento de DNS 
+    O que é o DNS?
+        É um conjunto de regras e registros que ajudam o cliente a chegar ao destino através de uma URL amigável.
+
+REGISTROS COMUNS 
+    URL, IP, REGISTRO/RECORD, TIPO
+
+FUNDAMENTOS DNS 
+
+CARACTERÍSTICAS 
+
+POLÍTICAS ROTEAMENTO
+    SIMPLES 
+    GEOLOCALIZAO
+    FAILOVER
+    .
+    .
+    .
+
+    SIMPLES:
+
+AMAZON CLOUDFRONT 
+
+DEFINIÇÃO:
+    Serviço de entrega de conteúdo...
+
+SEGURANÇA E CRIPTOGRAFIA
+
+ELASTIC LOAD BALANCER 
+DESCRIÇÃO:
+    Distribuir automaticamente ...
