@@ -398,81 +398,150 @@ DICAS DO EXAME:
 MEMORIZAÇÃO: Você "planta" o código e a AWS conecta os serviços para subir sua aplicação.
 
 AWS LAMBDA
-DEFINIÇÃO
-    O AWS Lambda permite que você execute códigos sem provisionar ou gerenciar servidores, pagando apenas pelo numeros de solicitações e pelo tempo de computação que vocÊ utilizar.
+    DEFINIÇÃO
+        O AWS Lambda permite que você execute códigos sem provisionar ou gerenciar servidores, pagando apenas pelo numeros de solicitações e pelo tempo de computação que vocÊ utilizar.
 
-CARACTERÍSTICAS 
-    Serverless
-    Escalável
-    Baixo custo
-    Múltiplas linguagens
+    CARACTERÍSTICAS 
+        Serverless
+        Escalável
+        Baixo custo
+        Múltiplas linguagens
 
-LINGUAGENS
-    Java
-    Go
-    PowerShell
-    Node.Js 
-    C#
-    Phyton
-    Ruby 
-    {api} - Integração de outras linguagens
+    LINGUAGENS
+        Java
+        Go
+        PowerShell
+        Node.Js 
+        C#
+        Phyton
+        Ruby 
+        {api} - Integração de outras linguagens
 
-FUNCIONAMENTO
-    Upload Código ou Edição Nativa -> Função Lambda -> AWS Lambda -> Pagamento por execução e tempo 
-                                            ^
-    Amazon Simple Storage Service (S3) | Amazon API Gateway | Amazon DynamoDB | Amazon Simple Notification Service | Amazon CloudFront | Modile App                    
+    FUNCIONAMENTO
+        Upload Código ou Edição Nativa -> Função Lambda -> AWS Lambda -> Pagamento por execução e tempo 
+                                                ^
+        Amazon Simple Storage Service (S3) | Amazon API Gateway | Amazon DynamoDB | Amazon Simple Notification Service | Amazon CloudFront | Modile App                    
 
-DICAS DO EXAME:
-    Serviço serverless e gerenciado pela AWS
-    AWS Lambda dimensiona suas aplicações
-    Você pode otimizar o tempo de execução e tamanho de memória 
-    Cobrança por número de solicitações de suas funcções e pela duração por cada milissegundo que leva para que seu código seja executado.
+    DICAS DO EXAME:
+        Serviço serverless e gerenciado pela AWS
+        AWS Lambda dimensiona suas aplicações
+        Você pode otimizar o tempo de execução e tamanho de memória 
+        Cobrança por número de solicitações de suas funcções e pela duração por cada milissegundo que leva para que seu código seja executado.
 
-AULA 05 - S3 
+AULA 05 - 
 
-DEFINIÇÃO:
-    É um serviço gerenciado de armazenamento e recuperação de objetos, respondendo ...
+S3 (Simple Storage Service)
+    DEFINIÇÃO:
+        É um serviço gerenciado de armazenamento e recuperação de objetos, respondendo com escalabilidade, disponibilidade, segurança e performance. 
 
- BENEFÍCIOS AMAZON S3
-    Armazenamento virtualmente ilimitado.
-    Compartilhamento arquivos ou criar um website estático.
-    Armazenar snapshots, backups, gerer um armazenamento híbrido do seu ambiente on-premises.
-    .
-    .
-    .
+    BENEFÍCIOS AMAZON S3
+        Armazenamento virtualmente ilimitado.
+        Compartilhamento arquivos ou criar um website estático.
+        Armazenar snapshots, backups, gerer um armazenamento híbrido do seu ambiente on-premises.
+        Repositório de data lakes e análise de big data
+        Baixa latência e alta velocidade
+        Durabilidade 99,999999999 (onze noves)
 
-NOMENCLATURAS
-    Armazenamento = Buckets
-    Arquivos = Objetos 
-    Sub-pastas = ...
+    NOMENCLATURAS
+        Armazenamento = Buckets
+        Arquivos = Objetos 
+        Sub-pastas = PREFIXOS
 
-USANDO UM BUCKET S3
-    Criar Bucket com nome único global
-    Configurar permissões
-    Enviar dados
+    USANDO UM BUCKET S3
+        Criar Bucket com nome único global
+        Configurar permissões
+        Enviar dados
 
-Exemplo de URL
-    Memorize a ordem da URL
-    ...
+    Exemplo de URL
+        Memorize a ordem da URL
+        Ver imagem EX-URL_BUCKET.png 
 
-CONHECENDO OBJETOS 
-    Tamanho máximo objeto 5TB
-    Upload > 5 GB use multi-part upload 
-    Metadata (...)
-    Tags (chave e valor...)
-    Versionamento de objetos 
+    CONHECENDO OBJETOS 
+        Tamanho máximo objeto 5TB
+        Upload > 5 GB use multi-part upload 
+        Metadata (chave e valor por sistema e usuário)
+        Tags (chave e valor por usuário)
+        Versionamento de objetos 
 
-DICAS DO EXAME
-    Amazon S3 é um serviço CORE da AWS
-    Entenda o que é e como ele funciona 
-    Leia os benefícios...
-    .
-    .
-    .
+    DICAS DO EXAME
+        Amazon S3 é um serviço CORE da AWS
+        Entenda o que é e como ele funciona 
+        Leia os benefícios e enetnda o conceito de objetos
+        Faça os laboratórios disponíveis
+        Memorize a URL S3
 
-DADOS
-    DEFINIÇÃO: ...
+    DADOS
+        DEFINIÇÃO:
+            Oferecer uma variedade de categorias de armazenamento, para atender diferentes casos de uso. Em conjunto com a política de ciclo de vida,
+        os dados são migradas automaticamente entre essas categorias, refletindo em um menor custo de armazenamento.
 
+    CLASSES DE ARMAZENAMENTO 
+        Ver imagem CLASSE_DE_ARMAZENAMENTO.jpg
+
+    CENÁRIO:
+        O hospital onde você trabalha, está procurando formas de armazenar os prontuários médicos com menor custo. Qual a melhor solução que você 
+    pode apresentar, pensando na durabilidade e na disponibilidade dos dados?
+
+    Objeto -> Amazon Simple Storage Service (S3) Standard -> 30DIAS -> Amazon Simple Storage Service (S3) Standard IA -> 90DIAS -> Amazon S3 Glacier -> 180DIAS -> Amazon S3 Glacier Deep Archive
+
+AMAZON EBS - Elastic Block Store 
+    DEFINIÇÃO
+        É um serviço de armazenamento de blocos persistentes, projetado como um volume, para ser conectado e utilizado como um disco, em instância do Amazon EC2.
+        Armazenamento de blocos em alta escala fácil de usar em qualquer escala.
+
+    CARACTERÍSTICAS
+        Blocos persistentes (recomendado para SO, BD)
+        Proteção através de replicação (SLA 99,99%)
+        Diferentes tipos de discos (SSD & HDD)
+            Tipo Solid State Drive
+                General Purpose SSD (gp2, gp3)
+                Provisioned IOPS SSD (io1, io2)
+            Tipo Hard Diak Drive (HDD)
+                Cold HDD (sc1)
+                Throughput Optimized HDD (st1)
+                Magnetic (standard)
+        Redimensionar em minutos (on-the-fly)
+        Pagar por aquilo que está sendo provisionado
+        Snapshots manual ou automático (point-in-time)
+        Criptografia em repouso
+        Zona de disponibilidade 
+
+FAMÍLIA AWS SNOW 
+    AWS SNOWCONE 
+        8TB
+        Portátil
+        Lugares inóspitos
+        Poder Computacional
+    AWS SNOWBALL EDGE
+        Storage Optimized 
+            100TB
+        Compute Optimized
+            42TB
+            Migrar Petabytes
+    AWS SNOWMOBILE
+        Pode transportar até 100 petabytes de dados em uma única viagem, o equivalente a usar cerca de 1.250 dispositivos AWS SNOWBALL.
+        Caminhão de armazenamento 
+        100PB
+        Armazenamento local durável
+        Migrar Exabytes
+
+S3 GLACIER & GLACIER DEEP ARCHIVE
+    DEFINIÇÃO
+        Classes de armazenamento de objetos de long prazo, seguras e resilientes do Amazon S3 a partir de 1 USD por terabyte por mês.
+
+    CARACTERÍSTICAS
+        Armazenamento longo prazo 
+        S3 Glacier: 0,004 USD por gigabyte por mês
+        Deep Archive: 0,00099 USD GB-mês (acesso 1 ou 2x ano)
+        Disponibilidade de 99,99%
+        Durabilidade anual média 99,999999999%
+        Dados armazenados como um arquivo
+        Conteúdo é imutável após envio
+        Arquivamento de 1 byte até 40 terabytes
+        Recuperação Padrão de 3 até 5 horas
+        Recuperação Massa de 5 até 12 horas 
+        Recuperação Expressa (<250mb) 1 a 5 minutos 
+        Dados recuperados ficam no bucket S3 por 24 horas
 
 AULA 06 - VPC, ROUTE 53
 
