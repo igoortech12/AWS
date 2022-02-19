@@ -543,63 +543,129 @@ S3 GLACIER & GLACIER DEEP ARCHIVE
         Recuperação Expressa (<250mb) 1 a 5 minutos 
         Dados recuperados ficam no bucket S3 por 24 horas
 
-AULA 06 - VPC, ROUTE 53
+AULA 06 -
 
 AMAZON VPC
+    DEFINIÇÃO: 
+        Sessão isolada logicamente na nunvem AWS, que permite customizar uma rede virtual e executar recursos, em um ambiente com controle total.
 
-DEFINIÇÃO: 
-    Sessão isolada logicamente na nunvem AWS, que permite customizar uma rede virtual e executar recursos, em um ambiente com controle total.
+    BENEFÍCIOS:
+        Mesmo conceito on-premises
+        Total controle na configuração
+        Oferece camadas de segurança (Security Group & NACLs-Network Access List)
+        Conectivdade com outros serviços
 
-BENEFÍCIOS:
-    Mesmo conceito on-premises
-    Total controle na configuração
-    Oferece camadas de segurança (SG & NACLs)
-    Conectivdade com outros serviços
-
-CONECTIVIDADE:
-
-CARACTERÍSTICAS:
-    Região e Zona de disponibilidade
-    Sub-redes [Pública e Privada]
-    Tabela de Roteamento
-    Internet Gateway [sub-rede pública]
-    Nat Gateway [sub-rede privada]
-    Security Group [SG] e Network Access List [NACLs]
+    CONECTIVIDADE:
+        VPC conecta os serviços. Faz a "conversação" entre eles.
+        Exemplo de serviços:
+            Amazon EC2, Amazon EMR, Amazon RDS, Amazon WorkSpaces, AWS OpsWorks, Amazon Elastic File System, Amazon ElastiCache, Amazon Route 53, Amazon S3, Amazon DynamoDB, AWS Elastic Beanstalk, Elastic Load Balancing.
+   
+    CARACTERÍSTICAS:
+        Região e Zona de disponibilidade
+        Sub-redes [Pública e Privada]
+        Tabela de Roteamento
+        Internet Gateway [sub-rede pública]
+        Nat Gateway [sub-rede privada]
+        Security Group [SG] e Network Access List [NACLs]
 
 AMAZON ROUTE 53
+    DEFINIÇÃO
+        Serviço que atua como DNS (Domain Name System), que encaminha as solicitações dos usuários, para os aplicativos de Internet.
+        O nome Route 53 é uma referência da porta 53.
 
-DEFINIÇÃO
-    Serviço que atua como DNS (Domain Name System), que encaminha as solicitações dos usuários ....
+    CARACTERÍSTICAS
+        Grenciamento de DNS 
+        O que é o DNS?
+            É um conjunto de regras e registros que ajudam o cliente a chegar ao destino através de uma URL amigável.
 
-CARACTERÍSTICAS
-    Grenciamento de DNS 
-    O que é o DNS?
-        É um conjunto de regras e registros que ajudam o cliente a chegar ao destino através de uma URL amigável.
+    REGISTROS COMUNS 
+        URL, IP, REGISTRO/RECORD, TIPO
+            URL
+                www.google.com 
+            IP
+                IPV4: 0.0.0.0
+                IPV6: 0:0:0:0:0:0:0:0
+            REGISTROS/RECORD
+                A, AAAA, CNAME, ALIAS 
 
-REGISTROS COMUNS 
-    URL, IP, REGISTRO/RECORD, TIPO
+    FUNCIONAMENTO DNS 
+        CLIENT <-dns request-> Amazon ROUTE 53 <-request/response-> 172.16.0.0 | 172.16.0.0 | 172.16.2.0 (Route Table)
+            | <-http request ip 32.40.15.12|http response ip 32.40.15.12-> WEB SERVER IP 32.40.15.12
 
-FUNDAMENTOS DNS 
+    CARACTERÍSTICAS 
+        Gerenciamento de DNS <------|                       |---> Monitoramento/Disponibilidade
+                                    |--- Amazon Route 53 ---| 
+        Gerenciamento de Tráfego <--|                       |---> Registro de Domínios
 
-CARACTERÍSTICAS 
+    POLÍTICAS ROTEAMENTO
+        SIMPLES 
+        GEOLOCALIZAÇÃO
+        FAILOVER
+        PONDERADO (WEIGHTED)
+        LATÊNCIA 
+        VALORES MULTIPLOS 
 
-POLÍTICAS ROTEAMENTO
-    SIMPLES 
-    GEOLOCALIZAO
-    FAILOVER
-    .
-    .
-    .
+        SIMPLES (Sem health check):
+            CLIENT --app.exemplo.com--> Amazon 53
+               | <--a record ip 53.42.1.15--|
 
-    SIMPLES:
+        PONDERADO (Sem health check):
+            Amazon Route 53 | -->> 70%
+                            | -->> 30%  
+
+        LATÊNCIA (Possui health check):
+            Solicitação para local mais próximo.
+
+        FAILOVER (Possui health check):
+            Disaster recovery - Segundo local mais próximo de comunicação caso o primário fique offline.
+
+        GEOLOCALIZAÇÃO (Possui health check):
+            Por região.
+            Distribui os clientes para serviços próximo territorial.
+
+        VALORES MULTIPLOS (Possui health check):
+            Até 8 registros íntegros.
+
 
 AMAZON CLOUDFRONT 
+    DEFINIÇÃO:
+        Serviço de entrega de conteúdo (CDN) que entrega dados, vídeos, aplicativos e APIs a clientes de forma mundial, com segurança, baixa latência e alta velocidade.
 
-DEFINIÇÃO:
-    Serviço de entrega de conteúdo...
+    SEGURANÇA E CRIPTOGRAFIA
 
-SEGURANÇA E CRIPTOGRAFIA
+    FUNCIONAMENTO
+        USUÁRIO --> PRONTO DE PRESENÇA (POP/EDGE LOCATION) --> AMAZON CLOUDFORNT --> MULTIMÍDIA --> PONTO DE PRESENÇA --> MULTIMÍDIA --> USUÁRIO <--> PONTO DE PRESENÇA (MESMO DADOS)
 
 ELASTIC LOAD BALANCER 
-DESCRIÇÃO:
-    Distribuir automaticamente ...
+    DESCRIÇÃO:
+        Distribuir automaticamente o tráfego de entrada de aplicativos entre diversos destinos, como instâncias do Amazon EC2, contâineres, endereços IP e funções Lambda.
+
+    TIPOS DE LOAD BALANCER NA AWS
+        Aplication Load Balancer
+            Protocolos: HTTP, HTTPS
+            Plataforma: Amazon VPC 
+            Camada OSI: 7
+            Recomendável: Amazon EC2, Contêineres, Funções Lambda, Endereços IP.
+        Network Load Balancer
+            Protocolos: TCP, UDP, TLS
+            Plataforma: Amazon VPC 
+            Camada OSI: 4
+            Recomendável: Amazon EC2, Contêineres, Microserviços.
+        Gateway Load Balancer 
+            Protocolos: IP(GENEVE) porta 6081
+            Plataforma: Amazon VPC 
+            Camada OSI: 3
+            Recomendável: Gerenciar virtual appliance como firewall e inspeção de pacotes, no Amazon EC2.
+        Classic Load Balancer (Legado)
+            Protocolos: HTTP, HTTPS, UDP, TCP, TLS
+            Plataforma: Amazon VPC 
+            Camada OSI: 7 ou 4
+            Recomendável: !!!
+
+    Script para laboratório
+        #!/bin/bash
+        yum update -y
+        yum install -y httpd
+        systemctl start httpd
+        systemctl enable httpd
+        echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
