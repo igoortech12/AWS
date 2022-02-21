@@ -669,3 +669,79 @@ ELASTIC LOAD BALANCER
         systemctl start httpd
         systemctl enable httpd
         echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+Aula 07 - 
+
+AMAZON CLOUDWATCH 
+DEFINIÇÃO:
+    É um serviço de monitoramento...
+
+FUNCIONAMENTO:
+    COLETAR->MONITORAR->ATUAR->ANALISAR
+
+    COLETAR:
+        Mátricas e Logs
+        Recursos e Serviços na Nuvem e on-premises 
+        Métrica padrão 5 Minutos
+        Métrica detalhada ($$$) por minutos
+        EXEMPLO MÉTRICAS:
+            Amazon EC2: Utilização CPU, Status check, Rede..
+            .
+            .
+            .
+    MONITORAR:
+        Visualizar as aplicações e a sua infraestrutura em um único local.
+        Acessar um Dashboard automático.
+        Criar o seu Dashboard (painel)
+        .
+        .
+        .
+    ATUAR:
+        Criar alarmes para atuar como gatinho, baseado nas métricas de uso e desempenho.
+        Opções do gatilho: amostra, %, valor máximo, mínimo, etc.
+        ALARM ACTION:
+            .
+            .
+    ANALISAR:
+        Análise de alarmes possui três estados:
+        OK - tudo ok 
+        INSUFFICIENTE_DATA - coletando dados
+        ALARM - algo ruim aconteceu ou para indicar qeu a sua métrica foi atingida.
+
+AWS CLOUDTRAIL
+DEFINIÇÃO:
+    É um serviço que possibilita governança, conformidade,....
+
+DIFERENÇA DOS SERVIÇOS:
+    Amazon CloudWatch: performance/desempenho
+    AWS CloudTrail: auditoria/conformidade
+
+AWS CONFIG 
+DEFINIÇÃO:
+    É um serviço que permite acessar, auditar e avaliar as configurações dos recursos da AWS.
+
+FUNCIONAMENTO:
+
+DICAS DO EXAME:
+    AWS Config é Regional
+    Auxilia na auditoria das alterações dos recursos para compliance
+    Mantém histórico das alterações e armazenamento...
+    .
+    .   
+    .
+
+AWS ORGANIZATIONS
+DEFINIÇÃO:
+    Permite que você gerencie e controle seu ambiente de maneira centralizada.
+
+FUNCIONAMENTO:
+
+DICAS DO EXAME:
+    Serviço Global
+    Permite gerenciar múltiplas contas AWS 
+    Uma conta principal (Master Account)
+    API ...
+    .
+    ..
+    .
