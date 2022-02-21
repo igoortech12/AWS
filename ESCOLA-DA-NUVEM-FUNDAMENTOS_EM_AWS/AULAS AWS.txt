@@ -745,3 +745,41 @@ DICAS DO EXAME:
     .
     .
     .
+
+WELL-ARCHITECTED
+PRINCÍPIOS GERAIS
+    Pare de ficar adivinhando a sua capacidade
+    Teste o seu produto em escala de produção
+    Automatize a sua arquitetura para sua experimentação ser fácil 
+    Permita a evelição da arquitetura
+    Construa sua arquitetura baseado em dados 
+    Melhore através de gamedays
+
+PRINCÍPIOS DO DESIGN
+    Escalabilidade: vertical & horizontal
+    Recursos descartáveis: nada é para sempre
+    Automação: serveless, IaaS, Auto scaling 
+    Loose couple: falhas não podem cascatear & não ao monolito
+    Serviços não Servidores: ....
+
+SEIS PILARES WELL-ARCHITECTED - https://aws.amazon.com/pt/architecture/well-architected/
+    1.Operation Excellence: executar e monitorar para entregar valor
+    2.Security:
+    3.Reliability
+    4.Performance Efficiency
+    5.Cost Optimization
+    6.Sustentabilidade
+
+ 
+AWS ARTIFACT - ACORDOS ...
+ARTEFATOS DE COMPLIANCE
+DICAS DO EXAME:
+    Os documentos são chamados...
+
+AWS TRUSTED ADVISOR
+    Otimização de custo
+    Desempenho 
+    Segurança 
+    Tolerância a falhas 
+    Limites de serviço 
+
