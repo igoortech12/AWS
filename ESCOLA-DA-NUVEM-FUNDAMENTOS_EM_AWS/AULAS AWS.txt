@@ -669,3 +669,117 @@ ELASTIC LOAD BALANCER
         systemctl start httpd
         systemctl enable httpd
         echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+Aula 07 - 
+
+AMAZON CLOUDWATCH 
+DEFINIÇÃO:
+    É um serviço de monitoramento...
+
+FUNCIONAMENTO:
+    COLETAR->MONITORAR->ATUAR->ANALISAR
+
+    COLETAR:
+        Mátricas e Logs
+        Recursos e Serviços na Nuvem e on-premises 
+        Métrica padrão 5 Minutos
+        Métrica detalhada ($$$) por minutos
+        EXEMPLO MÉTRICAS:
+            Amazon EC2: Utilização CPU, Status check, Rede..
+            .
+            .
+            .
+    MONITORAR:
+        Visualizar as aplicações e a sua infraestrutura em um único local.
+        Acessar um Dashboard automático.
+        Criar o seu Dashboard (painel)
+        .
+        .
+        .
+    ATUAR:
+        Criar alarmes para atuar como gatinho, baseado nas métricas de uso e desempenho.
+        Opções do gatilho: amostra, %, valor máximo, mínimo, etc.
+        ALARM ACTION:
+            .
+            .
+    ANALISAR:
+        Análise de alarmes possui três estados:
+        OK - tudo ok 
+        INSUFFICIENTE_DATA - coletando dados
+        ALARM - algo ruim aconteceu ou para indicar qeu a sua métrica foi atingida.
+
+AWS CLOUDTRAIL
+DEFINIÇÃO:
+    É um serviço que possibilita governança, conformidade,....
+
+DIFERENÇA DOS SERVIÇOS:
+    Amazon CloudWatch: performance/desempenho
+    AWS CloudTrail: auditoria/conformidade
+
+AWS CONFIG 
+DEFINIÇÃO:
+    É um serviço que permite acessar, auditar e avaliar as configurações dos recursos da AWS.
+
+FUNCIONAMENTO:
+
+DICAS DO EXAME:
+    AWS Config é Regional
+    Auxilia na auditoria das alterações dos recursos para compliance
+    Mantém histórico das alterações e armazenamento...
+    .
+    .   
+    .
+
+AWS ORGANIZATIONS
+DEFINIÇÃO:
+    Permite que você gerencie e controle seu ambiente de maneira centralizada.
+
+FUNCIONAMENTO:
+
+DICAS DO EXAME:
+    Serviço Global
+    Permite gerenciar múltiplas contas AWS 
+    Uma conta principal (Master Account)
+    API ...
+    .
+    .
+    .
+
+WELL-ARCHITECTED
+PRINCÍPIOS GERAIS
+    Pare de ficar adivinhando a sua capacidade
+    Teste o seu produto em escala de produção
+    Automatize a sua arquitetura para sua experimentação ser fácil 
+    Permita a evelição da arquitetura
+    Construa sua arquitetura baseado em dados 
+    Melhore através de gamedays
+
+PRINCÍPIOS DO DESIGN
+    Escalabilidade: vertical & horizontal
+    Recursos descartáveis: nada é para sempre
+    Automação: serveless, IaaS, Auto scaling 
+    Loose couple: falhas não podem cascatear & não ao monolito
+    Serviços não Servidores: ....
+
+SEIS PILARES WELL-ARCHITECTED - https://aws.amazon.com/pt/architecture/well-architected/
+    1.Operation Excellence: executar e monitorar para entregar valor
+    2.Security:
+    3.Reliability
+    4.Performance Efficiency
+    5.Cost Optimization
+    6.Sustentabilidade
+
+ 
+AWS ARTIFACT - ACORDOS ...
+ARTEFATOS DE COMPLIANCE
+DICAS DO EXAME:
+    Os documentos são chamados...
+
+AWS TRUSTED ADVISOR
+    Otimização de custo
+    Desempenho 
+    Segurança 
+    Tolerância a falhas 
+    Limites de serviço 
+
