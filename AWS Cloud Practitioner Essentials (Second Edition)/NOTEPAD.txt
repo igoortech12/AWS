@@ -73,4 +73,30 @@ MÓDULO 3: SERVIÇOS integrados
         Auto Scaling ajuda a garantir que vocÊ tenha o núemro correto de instâncias do Amazon EC2 disponíveis para processar a carga dos aplicativos.
 
     AMAZON ROUTE 53
-        
+        Sistema de nome de domínio ou DNS.
+        Registro de domínio
+        DNS global e altamente disponível
+        Nomes DNS públicos e privados
+        Vários algoritmos de Roteamento tanto IPv4 quanto IPv6
+        Integrados a outros serviços de nuvem AWS
+    
+    AMAZON RDS (RELATIONAL DATABASE SERVICE)
+        É um serviço gerenciado que configura e opera um banco de dados relacional na nuvem.
+            > Instalação e patches de OS 
+            > Instalação e patches de softwares de banco de dados
+            > Backups de banco de dados 
+            > Alta disponibilidade 
+            > Escala 
+            > Energização e organização em racks
+            > Manutenção do servidor 
+    
+    AWS LAMBDA
+        É um serviço de computação que permite executar código sem provisionar ou gerenciar produtos. AWS Lambda executa seu código somente quando necessário e dimensiona automaticamente para milhares de solicitações por segundo.
+            > Computador sem servidor, totalmente gerenciada
+            > Execução orienta a eventos
+            > Medição de frações de segundo
+            > Várias linguagens compatíveis
+    
+    AWS ELASTIC BEANSTALK
+
+    
