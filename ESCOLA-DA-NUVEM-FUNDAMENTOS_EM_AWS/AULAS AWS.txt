@@ -805,3 +805,66 @@ AWS TRUSTED ADVISOR
         ENTERPRISE  - Segurança, Limites de Serviços, Otimização de Custo, Tolerância a Falhas e Desempenho.
 
 AULA 8 - 
+
+AMAZON RDS - RELATIONAL DATABASE SERVICE
+    DEFINIÇÃO
+        O Amazon Relational Database Service (ou Amazon RDS) é um banco de dados relacional que destaca-se por 
+    sua escalabilidade, automação na aplicação de patchesm provisionamento de hardware e backup na Nuvem.
+
+    FUNDAMENTOS
+        Tabelas relacionadas.
+        SQL: Linguagem de Consulta Estruturada.
+    
+    MECANISMOS DISPONÍVEIS
+        Amazon Aurora
+        MySQL
+        MariaDB
+        PostgreSQL
+        ORACLE
+        SQL Server
+
+    ARQUITETURA RDS (MULTI-AZ)
+        VANTAGENS
+            Simples, segura e funcional
+            Réplica em outra zona 
+            Redundância de dados
+            Eliminar congelamento
+            Minimizar picos 
+            Alta disponibilidade
+        
+AMAZON DYNAMODB 
+    DEFINIÇÃO 
+        O Amazon DynamoDB é um banco de dados não relacional (NoSQL) de chave-valor e documento que oferece desempenho de milisegundos.
+
+    CARACTERÍSTICAS
+        Serverless - AWS gerencia os recursos.
+        Confiável - Criptografia em repouso por padrão.
+        Rápido - Latência em microsegundos.
+        Escalável - Virtualmente ilimitado.
+
+   DICAS DO EXAME
+        Tabela é uma coleção de itens.
+        Cada item possui um atributo.
+        Chave primária é obrigatória e é utilizada para identificar um item na tabela.
+        Chave secundária é opcional. É fornecer flexibilidade na consulta.
+
+AWS CLOUDFORMATION
+    DEFINIÇÃO
+        O AWS CloudFormation é um serviço que oferece uma linguaguem comum para que você possa descrever e fornecer todos os recursos de 
+    infraestrutura em um ambiente de Nuvem.
+    
+    CARACTERÍSTICAS
+        JSon ou Yaml
+        Templates
+        Stack
+
+    FUNCIONAMENTO
+        CLI/CONSOLE/SDK -> DOC JSON OU DOC YAML -> AWS CLOUDFORMATION -> STACK 
+
+    DICAS DO EXAME
+        Replicar uma infraestrutura múltiplas vezes.
+        Time de desenvolvimento usar como ambiente de testes e produção.
+        Precisa ter controle de versão.
+        AWS CloudFormation = Infrestrutura como Código.
+
+   
