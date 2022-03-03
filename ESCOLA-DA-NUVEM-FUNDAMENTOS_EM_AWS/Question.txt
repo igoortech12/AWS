@@ -1,0 +1,25 @@
+01. Uma empresa de serviços financeiros planeja habilitar a autenticação
+multifator (MFA) para seus funcionários. Para facilitar o deslocamento, eles
+preferem não usar nenhum dispositivo físico para implantar o MFA. Qual das
+opções abaixo é mais adequada para esse caso?
+    Dispositivo MFA Virtual
+    Dispositivo MFA de hardware
+    Chave de segurança U2F
+    Soft Token MFA
+
+02. Qual é o principal benefício da implantação de um banco de dados RDS em
+uma configuração Multi-AZ?
+Aumentar a disponibilidade do banco de dados
+Proteger o banco de dados de uma falha regional
+Reduzir os custos de uso do banco de dados
+Melhorar o desempenho do banco de dados para cargas de trabalho pesadas prontas
+
+03. Um aplicativo da web de compartilhamento de fotos deseja armazenar
+miniaturas de imagens enviadas por usuários no Amazon S3. As miniaturas
+raramente são usadas, mas precisam estar disponíveis no aplicativo da web. As
+miniaturas podem ser recuperadas facilmente se forem perdidas. Qual é a
+maneira com maior custo-benefício de armazenar essas miniaturas?
+Usar S3 Glacier para armazenar as miniaturas
+Usar o acesso infrequente padrão S3 (Standard-IA) para armazenar as miniaturas
+Usar S3 Standard para armazenar as miniaturas
+Usar S3 One-Zone Infrequent Access (One-Zone IA) para armazenar as miniaturas
