@@ -1,3 +1,8 @@
+EC2
+SO: Ubuntu 18.04
+INSTÂNCIA: t3.small
+
+
 Instalação KUBECTL
 ==================
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
@@ -31,4 +36,9 @@ sudo chown -R $USER $HOME/.minikube
 sudo chgrp -R $USER $HOME/.minikube
 
 
+kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
+
+kubectl get pods
+
+kubectl expose pod hello-minikube --type=NodePort
 
