@@ -3,3 +3,18 @@ UDEMY - https://www.udemy.com/course/draft/2437002/learn/lecture/15298818?start=
 
 Cloud Practitioner
 https://aws.amazon.com/pt/training/learn-about/cloud-practitioner/
+
+Banco de questões
+https://www.koenig-solutions.com/aws
+
+Exames grautitos 
+https://aws.amazon.com/pt/blogs/aws-brasil/exames-praticos-gratuitos-e-100-em-portugues-para-voce-se-preparar-para-a-sua-certificacao/
+
+
+https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+
+https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+
+https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf

@@ -674,112 +674,197 @@ ELASTIC LOAD BALANCER
 Aula 07 - 
 
 AMAZON CLOUDWATCH 
-DEFINIÇÃO:
-    É um serviço de monitoramento...
+    DEFINIÇÃO:
+        É um serviço de monitoramento de desempenho dos recursos e dos aplicativos que você executa no seu ambiente.
 
-FUNCIONAMENTO:
-    COLETAR->MONITORAR->ATUAR->ANALISAR
+    FUNCIONAMENTO:
+        COLETAR->MONITORAR->ATUAR->ANALISAR
 
-    COLETAR:
-        Mátricas e Logs
-        Recursos e Serviços na Nuvem e on-premises 
-        Métrica padrão 5 Minutos
-        Métrica detalhada ($$$) por minutos
-        EXEMPLO MÉTRICAS:
-            Amazon EC2: Utilização CPU, Status check, Rede..
-            .
-            .
-            .
-    MONITORAR:
-        Visualizar as aplicações e a sua infraestrutura em um único local.
-        Acessar um Dashboard automático.
-        Criar o seu Dashboard (painel)
-        .
-        .
-        .
-    ATUAR:
-        Criar alarmes para atuar como gatinho, baseado nas métricas de uso e desempenho.
-        Opções do gatilho: amostra, %, valor máximo, mínimo, etc.
-        ALARM ACTION:
-            .
-            .
-    ANALISAR:
-        Análise de alarmes possui três estados:
-        OK - tudo ok 
-        INSUFFICIENTE_DATA - coletando dados
-        ALARM - algo ruim aconteceu ou para indicar qeu a sua métrica foi atingida.
+        COLETAR:
+            Mátricas e Logs
+            Recursos e Serviços na Nuvem e on-premises 
+            Métrica padrão 5 Minutos
+            Métrica detalhada ($$$) por minutos
+            EXEMPLO MÉTRICAS:
+                Amazon EC2: Utilização CPU, Status check, Rede (não RAM)
+                EBS Volume: Leitura e Gravação do disco.
+                S3 Bucket: Tamanho do bucket S3, número objetos.
+                Lambda: Tempo de execução e duração.
+        MONITORAR:
+            Visualizar as aplicações e a sua infraestrutura em um único local.
+            Acessar um Dashboard automático.
+            Criar o seu Dashboard (painel) personalizado, com os serviços e métricas que deseja acompanhar.
+            Configurar alarmes visuais do ambiente.
+        ATUAR:
+            Criar alarmes para atuar como gatinho, baseado nas métricas de uso e desempenho.
+            Opções do gatilho: amostra, %, valor máximo, mínimo, etc.
+            ALARM ACTION:
+                Auto Scaling Group: Aumentar ou diminuir o número de instâncias no Amazon EC2.
+                Amazon EC2: Parar, terminar, reiniciar ou recuperar uma instância.
+                Amazon SNS: Enviar notificações para um SNS Topic, para que os assinantes recebam um e-mail.
+        ANALISAR:
+            Análise de alarmes possui três estados:
+            OK - tudo ok 
+            INSUFFICIENTE_DATA - coletando dados
+            ALARM - algo ruim aconteceu ou para indicar qeu a sua métrica foi atingida.
 
 AWS CLOUDTRAIL
-DEFINIÇÃO:
-    É um serviço que possibilita governança, conformidade,....
+    DEFINIÇÃO:
+        É um serviço que possibilita governança, conformidade, auditoria operacional e auditoria de riscos em sua conta AWS.
+        Histórico do serviço fica salvo por 90 dias.
 
-DIFERENÇA DOS SERVIÇOS:
-    Amazon CloudWatch: performance/desempenho
-    AWS CloudTrail: auditoria/conformidade
+    DIFERENÇA DOS SERVIÇOS:
+        Amazon CloudWatch: performance/desempenho
+        AWS CloudTrail: auditoria/conformidade
 
 AWS CONFIG 
-DEFINIÇÃO:
-    É um serviço que permite acessar, auditar e avaliar as configurações dos recursos da AWS.
+    DEFINIÇÃO:
+        É um serviço que permite acessar, auditar e avaliar as configurações dos recursos da AWS.
 
-FUNCIONAMENTO:
+    FUNCIONAMENTO:
+        Efetua Checklist.
+        Dados obtidos são armazenados em um Bucket S3.
+        Checklist não conforme, gera alertas enviados pelo Amazon SNS.
 
-DICAS DO EXAME:
-    AWS Config é Regional
-    Auxilia na auditoria das alterações dos recursos para compliance
-    Mantém histórico das alterações e armazenamento...
-    .
-    .   
-    .
-
+    DICAS DO EXAME:
+        AWS Config é Regional
+        Auxilia na auditoria das alterações dos recursos para compliance
+        Mantém histórico das alterações e armazena em um Bucket S3 para posterior análise.
+        Notificações de alterações são enviadas como o Amazon SNS e disponibilizadas no Dashboard (painel) do AWS Config.
+        
 AWS ORGANIZATIONS
-DEFINIÇÃO:
-    Permite que você gerencie e controle seu ambiente de maneira centralizada.
+    DEFINIÇÃO:
+        Permite que você gerencie e controle seu ambiente de maneira centralizada.
 
-FUNCIONAMENTO:
+    FUNCIONAMENTO:
+        AWS Organizations Cria e organiza grupos de acesso.
+        Cada grupo possui suas liberações.
+        Há uma conta ou grupo de contas que são chamadas de Master Account.
+        A Master Account fica responsável por administrar tanto as permissões dos grupos, quanto o Faturamento de todos os grupos e agragar os custos.
+            Consolidar Faturamento
+            Agregar preços
+            Gerar ecnonomia com pooling de insâncias reservadas.
 
-DICAS DO EXAME:
-    Serviço Global
-    Permite gerenciar múltiplas contas AWS 
-    Uma conta principal (Master Account)
-    API ...
-    .
-    .
-    .
-
+    DICAS DO EXAME:
+        AWS Organizations é um Serviço Global.
+        Permite gerenciar múltiplas contas AWS. 
+        Uma conta principal (Master Account).
+        API disponível para criação de contas.
+        Restrição de contas usando SCP (Service Control Police)
+        
 WELL-ARCHITECTED
-PRINCÍPIOS GERAIS
-    Pare de ficar adivinhando a sua capacidade
-    Teste o seu produto em escala de produção
-    Automatize a sua arquitetura para sua experimentação ser fácil 
-    Permita a evelição da arquitetura
-    Construa sua arquitetura baseado em dados 
-    Melhore através de gamedays
+    PRINCÍPIOS GERAIS
+        Pare de ficar adivinhando a sua capacidade
+        Teste o seu produto em escala de produção
+        Automatize a sua arquitetura para sua experimentação ser fácil 
+        Permita a evelição da arquitetura
+        Construa sua arquitetura baseado em dados 
+        Melhore através de gamedays
 
-PRINCÍPIOS DO DESIGN
-    Escalabilidade: vertical & horizontal
-    Recursos descartáveis: nada é para sempre
-    Automação: serveless, IaaS, Auto scaling 
-    Loose couple: falhas não podem cascatear & não ao monolito
-    Serviços não Servidores: ....
+    PRINCÍPIOS DO DESIGN
+        Escalabilidade: vertical & horizontal
+        Recursos descartáveis: nada é para sempre
+        Automação: serveless, IaaS, Auto scaling 
+        Loose couple: falhas não podem cascatear & não ao monolito
+        Serviços não Servidores: Será que não tem um serviço para isso?
 
-SEIS PILARES WELL-ARCHITECTED - https://aws.amazon.com/pt/architecture/well-architected/
-    1.Operation Excellence: executar e monitorar para entregar valor
-    2.Security:
-    3.Reliability
-    4.Performance Efficiency
-    5.Cost Optimization
-    6.Sustentabilidade
+    SEIS PILARES WELL-ARCHITECTED - https://aws.amazon.com/pt/architecture/well-architected/
+        1.Operation Excellence: executar e monitorar para entregar valor.
+        2.Security: Proteger informações e sistemas.
+        3.Reliability: Garantir que uma carga de trabalho execute sua função pretendida corretamente e de modo consistente.
+        4.Performance Efficiency: Uso eficiente de recursos e computação.
+        5.Cost Optimization: Compreensão e controle de onde o dinheiro está sendo gasto, ajustando os recursos e serviços.
+        6.Sustentabilidade: Minimizar os impactos ambientes da execução da carga de trabalho na nuvem.
+    
+AWS ARTIFACT - ACORDOS E RELATÓRIOS DE CONFORMIDADE
+    ARTEFATOS DE COMPLIANCE
+        AICPA SOC 
+        ISO 27001
+        FedRAMP
+        IRAP
+        PCI Security Standards Council
+        HIPAA
+        C5
 
- 
-AWS ARTIFACT - ACORDOS ...
-ARTEFATOS DE COMPLIANCE
-DICAS DO EXAME:
-    Os documentos são chamados...
+    DICAS DO EXAME:
+        Os documentos são chamados de artefatos.
+        Os relatórios de segurança e compliance, são ISO, PCI e SOC.
+        Os acordos de uso de serviços (agreements), são BAA e HIPAA.
 
 AWS TRUSTED ADVISOR
     Otimização de custo
-    Desempenho 
+    Desempenho
     Segurança 
     Tolerância a falhas 
     Limites de serviço 
 
+    LIMITE POR PLANOS DE SUPORTE
+        BASIC       - Segurança, Limites de Serviços.
+        DEVELOPER   - Segurança, Limites de Serviços.
+        BUSINESS    - Segurança, Limites de Serviços, Otimização de Custo, Tolerância a Falhas e Desempenho.
+        ENTERPRISE  - Segurança, Limites de Serviços, Otimização de Custo, Tolerância a Falhas e Desempenho.
+
+AULA 8 - 
+
+AMAZON RDS - RELATIONAL DATABASE SERVICE
+    DEFINIÇÃO
+        O Amazon Relational Database Service (ou Amazon RDS) é um banco de dados relacional que destaca-se por 
+    sua escalabilidade, automação na aplicação de patchesm provisionamento de hardware e backup na Nuvem.
+
+    FUNDAMENTOS
+        Tabelas relacionadas.
+        SQL: Linguagem de Consulta Estruturada.
+    
+    MECANISMOS DISPONÍVEIS
+        Amazon Aurora
+        MySQL
+        MariaDB
+        PostgreSQL
+        ORACLE
+        SQL Server
+
+    ARQUITETURA RDS (MULTI-AZ)
+        VANTAGENS
+            Simples, segura e funcional
+            Réplica em outra zona 
+            Redundância de dados
+            Eliminar congelamento
+            Minimizar picos 
+            Alta disponibilidade
+        
+AMAZON DYNAMODB 
+    DEFINIÇÃO 
+        O Amazon DynamoDB é um banco de dados não relacional (NoSQL) de chave-valor e documento que oferece desempenho de milisegundos.
+
+    CARACTERÍSTICAS
+        Serverless - AWS gerencia os recursos.
+        Confiável - Criptografia em repouso por padrão.
+        Rápido - Latência em microsegundos.
+        Escalável - Virtualmente ilimitado.
+
+   DICAS DO EXAME
+        Tabela é uma coleção de itens.
+        Cada item possui um atributo.
+        Chave primária é obrigatória e é utilizada para identificar um item na tabela.
+        Chave secundária é opcional. É fornecer flexibilidade na consulta.
+
+AWS CLOUDFORMATION
+    DEFINIÇÃO
+        O AWS CloudFormation é um serviço que oferece uma linguaguem comum para que você possa descrever e fornecer todos os recursos de 
+    infraestrutura em um ambiente de Nuvem.
+    
+    CARACTERÍSTICAS
+        JSon ou Yaml
+        Templates
+        Stack
+
+    FUNCIONAMENTO
+        CLI/CONSOLE/SDK -> DOC JSON OU DOC YAML -> AWS CLOUDFORMATION -> STACK 
+
+    DICAS DO EXAME
+        Replicar uma infraestrutura múltiplas vezes.
+        Time de desenvolvimento usar como ambiente de testes e produção.
+        Precisa ter controle de versão.
+        AWS CloudFormation = Infrestrutura como Código.
+
+   

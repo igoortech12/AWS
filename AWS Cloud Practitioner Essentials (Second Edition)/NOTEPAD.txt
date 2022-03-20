@@ -1,0 +1,102 @@
+MÓDULO 1: INTRODUÇÃO À NUVEM AWS
+    Computação em nuvem refere-se à entrega sob demanda de recursos e aplicativos de TI por meio da internet.
+
+MÓDULO 2: SERVIÇOS PRINCIPAIS
+    AMAZOM EC2 (ELASTIC COMPUTE CLOUD)
+        > Servidor de aplicativos
+        > Servidor web
+        > Servidor de banco de dados
+        > Servidor de jogos
+        > Servidor de e-mail
+        > Servidor de mídea
+        > Servidor de catálogo
+        > Servidor de arquivos
+        > Servidor de Computação
+        > Servidor de proxy
+        > etc 
+
+        INSTÂNCIAS DO AMAZOM EC2
+            > Pague conforme o uso
+            > Ampla seleção de hardware/software
+            > Hospedagem global
+            > dentre outros...
+        
+        ACESSANDO EC2
+            > Login no console AWS
+            > Escolher uma Região
+            > Assistente de execução do EC2
+            > Selecionar AMI (SW)
+            > Selecionar o tipo de instância (HW)
+            > Configurar redes
+            > Configurar armazenamento
+            > Executar e conectar-se
+
+    AMAZON EBS (ELASTIC BLOCK STORE) 
+        VISÃO GERAL
+            > Escolha entre os tipos de HDD e SSD
+            > Armazenamento em loco persistente e personalizável para a instâncias do EC2
+            > Replicado na mesma zona de disponibilidade
+            > Backup usando snapshots
+            > Criptografia fácel e transparente
+            > Volumes elásticos
+        
+    AMAZON S3 (SIMPLE STORAGE SERVICE)
+        Serviço gerenciado de armazenamento na nuvem
+        Armazene um número praticamente ilimitado de objetos
+        Acesse a qualquer momento, de qualquer lugar
+        Controle avançados de segurança
+
+    INFRAESTRUTURA GLOBAL 
+        Infraestrutura da AWS pode ser dividida em três partes: Regiões, Zona de disponibilidade e Edge Location.
+            > REGIÃO são áreas que hospedam duas ou mais zonas de disponibilidade e são o nível organizador dos produtos da AWS. =
+            > ZONA DE DISPONIBILIDADE são um conjunto de datacenters dentro de uma região específica. Cada zona de disponibilidade é fisicamente isolada das outras, mas conectada por uma rede rápida e de baixa latência.
+            > EDGE LOCATION (PONTO DE PRESENÇA) é uma rede de entrega de conteúdo, ou CDN, chamada de CloudFront.
+
+    AMAZON VPC (VIRTUAL PRIVATE CLOUD)
+        Criar rede privada dentro da Nuvem AWS. Possuindo recursos como: Criação com base n alta disponibilidade deas regiões e zonas de disponibilidade; Sub-redes; Tabelas de rotas; Gateway de internet; Nat Gateway;
+    Listas de controle de acesso de rede (NACL).
+
+    GRUPOS DE SEGURANÇA
+        Grupos de segurança
+            > Agem como firewalls integrados
+            > Controlam a acessibilidade a instâncias
+        
+MÓDULO 3: SERVIÇOS integrados
+    ELB (ELASTIC LOAD BALANCING)
+        Baseado em caminho e host Roteamento
+        IPv6 nativo Support
+        AWS WAF
+        Portas dinâmicas
+        Exclusão, Proteção e Rastreamento
+
+    AUTO SCALING
+        Auto Scaling ajuda a garantir que vocÊ tenha o núemro correto de instâncias do Amazon EC2 disponíveis para processar a carga dos aplicativos.
+
+    AMAZON ROUTE 53
+        Sistema de nome de domínio ou DNS.
+        Registro de domínio
+        DNS global e altamente disponível
+        Nomes DNS públicos e privados
+        Vários algoritmos de Roteamento tanto IPv4 quanto IPv6
+        Integrados a outros serviços de nuvem AWS
+    
+    AMAZON RDS (RELATIONAL DATABASE SERVICE)
+        É um serviço gerenciado que configura e opera um banco de dados relacional na nuvem.
+            > Instalação e patches de OS 
+            > Instalação e patches de softwares de banco de dados
+            > Backups de banco de dados 
+            > Alta disponibilidade 
+            > Escala 
+            > Energização e organização em racks
+            > Manutenção do servidor 
+    
+    AWS LAMBDA
+        É um serviço de computação que permite executar código sem provisionar ou gerenciar produtos. AWS Lambda executa seu código somente quando necessário e dimensiona automaticamente para milhares de solicitações por segundo.
+            > Computador sem servidor, totalmente gerenciada
+            > Execução orienta a eventos
+            > Medição de frações de segundo
+            > Várias linguagens compatíveis
+    
+    AWS ELASTIC BEANSTALK
+
+    
